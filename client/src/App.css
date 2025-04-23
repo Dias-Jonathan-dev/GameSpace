@@ -131,7 +131,7 @@ table {
 
 :root {
   --bleu-clair: #211f40;
-  --orange: #ff69b4;
+  --orange: #ff5500;
 }
 
 .fav_nav {
@@ -146,3 +146,55 @@ table {
   background-color: var(--bleu-clair);
   padding: 0 40px;
 }
+
+.games-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+}
+
+.card-body {
+  width: 250px;
+  height: 350px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  background-color: var(--bleu-clair);
+  color: white;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-img {
+  height: 60%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.card-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 40%;
+  padding: 10px;
+}
+
+.card-info h3 {
+  font-size: 1.2rem;
+}
+
+.platforms {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+
+}
+
