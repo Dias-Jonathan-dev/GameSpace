@@ -1,8 +1,6 @@
 import { useNavigate } from "react-router";
 import favicon from "../assets/images/favicon.svg";
 
-useNavigate;
-
 function NavBar() {
   const navigate = useNavigate();
 
