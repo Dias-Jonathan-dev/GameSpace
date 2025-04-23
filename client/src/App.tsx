@@ -1,11 +1,11 @@
-import SearchBar from "./components/SearchBar";
 import "./App.css";
+import NavBar from "./components/Navbar";
 
 function App() {
   return (
-    <div className="App">
-      <SearchBar />
-    </div>
+    <>
+      <NavBar />
+    </>
   );
 }
 
