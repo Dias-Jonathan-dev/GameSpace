@@ -130,8 +130,27 @@ table {
 /* --------- RESET CSS -------- */
 
 :root {
-  --bleu-clair: #211f40;
+  --bleu-clair: #343f63;
   --orange: #ff5500;
+  --font-heading: "Orbitron", sans-serif;
+  --font-text: "Ubuntu", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+}
+
+p {
+  font-family: var(--font-text);
+}
+
+body {
+  background: linear-gradient(to right, #0a0f2c, #1e2a5a, #0a0f2c);
 }
 
 .fav_nav {
@@ -165,6 +184,7 @@ table {
   color: white;
   display: flex;
   flex-direction: column;
+  border: solid 1px rgb(72, 97, 180);
 }
 
 .card-img {
@@ -189,12 +209,21 @@ table {
 
 .card-info h3 {
   font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.card-info h4 {
+  font-size: 0.9rem;
+  color: var(--orange);
 }
 
 .platforms {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
-
+  gap: 8px;
+  font-size: 0.75rem;
 }
 
+.rate {
+  color: var(--orange);
+}
