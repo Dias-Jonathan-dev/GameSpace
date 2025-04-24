@@ -157,9 +157,19 @@ table {
   height: 3rem;
   gap: 10px;
   margin-bottom: 1rem;
-  /*background-color: orange;*/
+  background-color: orange;
   border-radius: 30px;
   /*border: none;*/
+}
+
+.searchbar input {
+  background-color: transparent;
+  border: none;
+}
+
+.searchbar ::placeholder {
+  color: rgb(248, 229, 204);
+  font-size: 1.1rem;
 }
 
 .loupe {
