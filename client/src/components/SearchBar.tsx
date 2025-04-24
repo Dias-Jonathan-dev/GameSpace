@@ -26,7 +26,7 @@ function SearchBar() {
 
   return (
     <>
-      <div className="SearchBar">
+      <div className="searchbar">
         <input
           type="text"
           placeholder="Recherchez un jeu"
@@ -34,7 +34,7 @@ function SearchBar() {
           id="SearchBar"
           onChange={handleSearchTerm}
         />
-        <img src={loupe_search} alt="loupe" />
+        <img className="loupe" src={loupe_search} alt="loupe" />
       </div>
       <div className="search_result">
         {gameData

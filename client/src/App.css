@@ -147,7 +147,7 @@ table {
   padding: 0 40px;
 }
 
-.SearchBar {
+.searchbar {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -161,9 +161,9 @@ table {
   /*border: none;*/
 }
 
-img {
+.loupe {
   height: 2rem;
-  opacity: 0.6;
+  opacity: 0.8;
 }
 
 .Search {
