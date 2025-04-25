@@ -155,7 +155,7 @@ body {
 }
 
 .fav-nav {
-  height: 120px;
+  height: 70px;
   width: 120px;
   background: none;
   border: none;
@@ -235,6 +235,48 @@ body {
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
+}
+
+header {
+  background-image: url("assets/images/image-header-v2.png");
+  height: 80vh;
+  background-color: #2b2a34;
+  background-blend-mode: overlay;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
+}
+
+.header-text {
+  max-width: 40ch;
+  line-height: 1.5;
+}
+
+h1 {
+  color: var(--orange);
+  font-size: 2rem;
+  margin-bottom: 20px;
+  font-weight: 800;
+}
+
+.header-img {
+  width: 40vh;
+}
+
+@media screen and (min-width: 900px) {
+  header {
+    flex-direction: row;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  }
+
+  .header-img {
+    width: 80vh;
+  }
 }
 
 .searchbar {
