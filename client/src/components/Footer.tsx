@@ -1,3 +1,4 @@
+import { Link } from "react-router";
 import logoNoir from "../assets/images/LOGO-BLANC.svg";
 
 function Footer() {
@@ -5,7 +6,7 @@ function Footer() {
     <footer>
       <img src={logoNoir} alt="Gamespace Logo" className="logo" />
       <p>Copyright 2025</p>
-      <a href="/mentions-legales">Mentions légales</a>
+      <Link to="/mentions-legales">Mentions légales</Link>
     </footer>
   );
 }
