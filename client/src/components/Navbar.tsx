@@ -7,7 +7,7 @@ function NavBar() {
 
   return (
     <div className="navbar">
-      <button type="button" className="fav_nav" onClick={() => navigate("/")}>
+      <button type="button" className="fav-nav" onClick={() => navigate("/")}>
         <img src={favicon} alt="nav-favicon" />
       </button>
       <SearchBar />
