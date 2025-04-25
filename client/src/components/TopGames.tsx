@@ -10,7 +10,7 @@ function TopGames() {
 
   return (
     <div>
-      <h1 className="h1">Les mieux notés</h1>
+      <h2>Les mieux notés</h2>
       <ul className="topgames">
         {topRatedGames.map((game) => (
           <GameCard key={game.id} game={game} />
