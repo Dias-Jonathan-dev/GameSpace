@@ -248,11 +248,12 @@ header {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
 }
 
 .header-text {
   max-width: 40ch;
+  line-height: 1.5;
 }
 
 h1 {
@@ -263,11 +264,16 @@ h1 {
 }
 
 .header-img {
-  width: 80vh;
+  width: 40vh;
 }
 
 @media screen and (min-width: 900px) {
   header {
     flex-direction: row;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  }
+
+  .header-img {
+    width: 80vh;
   }
 }
