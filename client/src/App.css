@@ -312,6 +312,24 @@ h1 {
   justify-content: center;
 }
 
+.topgames {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.card-body:hover {
+  transform: scale(1.2);
+  box-shadow: 0 10px 25px rgb(0, 0, 0, 0, 12);
+}
+
+h2 {
+  text-align: center;
+  font-size: 50px;
+  color: white;
+  margin-bottom: 20px;
+}
+
 .logo {
   height: 60px;
 }
