@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router";
 import favicon from "../assets/images/favicon.svg";
+import SearchBar from "../components/SearchBar";
 
 function NavBar() {
   const navigate = useNavigate();
@@ -9,6 +10,7 @@ function NavBar() {
       <button type="button" className="fav-nav" onClick={() => navigate("/")}>
         <img src={favicon} alt="nav-favicon" />
       </button>
+      <SearchBar />
     </div>
   );
 }
