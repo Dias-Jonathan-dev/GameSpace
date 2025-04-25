@@ -2,6 +2,7 @@ import "./App.css";
 import Footer from "./components/Footer";
 import GameCard from "./components/GameCard";
 import NavBar from "./components/Navbar";
+import Page404 from "./components/Page404";
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
       <NavBar />
       <GameCard />
       <Footer />
+      <Page404 />
     </>
   );
 }

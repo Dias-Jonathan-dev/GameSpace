@@ -246,3 +246,10 @@ footer a {
   text-decoration: none;
   color: white;
 }
+
+.Page404 {
+  background-color: #ffffff;
+  font-style: oblique;
+  font-size: medium;
+  align-items: center;
+}
