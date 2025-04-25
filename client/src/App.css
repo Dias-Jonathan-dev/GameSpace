@@ -88,6 +88,7 @@ video {
   padding: 0;
   border: 0;
   font-size: 100%;
+  font-style: inherit;
   vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
@@ -259,4 +260,29 @@ body {
 .Search {
   display: flex;
   justify-content: center;
+}
+
+.logo {
+  height: 60px;
+}
+
+footer {
+  background-color: blue;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  padding: 10px;
+}
+
+footer a {
+  text-decoration: none;
+  color: white;
+}
+
+.Page404 {
+  background-color: #ffffff;
+  font-style: oblique;
+  font-size: medium;
+  align-items: center;
 }
