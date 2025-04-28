@@ -270,7 +270,6 @@ footer {
   background-color: blue;
   display: flex;
   align-items: center;
-  justify-content: space-between;
   color: white;
   padding: 10px;
 }
@@ -280,9 +279,14 @@ footer a {
   color: white;
 }
 
-.Page404 {
-  background-color: #ffffff;
-  font-style: oblique;
-  font-size: medium;
-  align-items: center;
+.img-assasin {
+  margin: auto;
+  max-width: 100%;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  .img-assasin {
+    max-width: 90%;
+  }
 }
