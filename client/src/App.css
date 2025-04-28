@@ -347,14 +347,49 @@ footer a {
   color: white;
 }
 
+/* Mobile-First : Image responsive */
 .img-assasin {
   margin: auto;
-  max-width: 100%;
-  margin-bottom: 20px;
+  max-width: 100%; /* L'image prend 100% de la largeur du conteneur */
+  height: auto; /* L'image garde ses proportions */
+  margin-bottom: 20px; /* Espacement en bas de l'image */
+}
+
+/* Quand l'écran devient plus grand (par exemple tablette/desktop) */
+@media (min-width: 768px) {
+  .back-home-link {
+    font-size: 35px; /* Plus grand sur écran plus large */
+    padding: 15px 30px; /* Plus d'espace autour du texte */
+  }
 }
 
 @media (max-width: 768px) {
-  .img-assasin {
-    max-width: 90%;
+  .Mention-legales {
+    color: white;
+    padding: 20px; /* Moins de padding sur mobile */
+    max-width: 100%; /* Prendre toute la largeur disponible */
+  }
+
+  .Mention-legales h1 {
+    font-size: 28px; /* Taille plus petite pour les petits écrans */
+    margin-bottom: 20px;
+  }
+
+  .Mention-legales h2 {
+    font-size: 24px; /* Réduire la taille du sous-titre */
+    margin-top: 30px;
+    margin-bottom: 15px;
+  }
+
+  .Mention-legales h3 {
+    font-size: 20px; /* Réduire un peu les sous-sous titres */
+    margin-top: 25px;
+    margin-bottom: 10px;
+  }
+
+  .Mention-legales p {
+    font-size: 14px; /* Taille de texte plus petite sur mobile */
+    line-height: 1.6; /* Espacement des lignes un peu plus serré */
+    margin-bottom: 15px;
   }
 }

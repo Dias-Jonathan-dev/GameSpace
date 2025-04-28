@@ -7,6 +7,7 @@ import { RouterProvider, createBrowserRouter } from "react-router";
 
 // Import the main app component
 import App from "./App";
+import Mention from "./components/MentionLegal";
 import Page404 from "./components/Page404";
 
 // Import additional components for new routes
@@ -29,6 +30,8 @@ const router = createBrowserRouter([
     path: "/*",
     element: <Page404 />,
   },
+
+  { path: "/mentions-legales", element: <Mention /> },
   // Try adding a new route! For example, "/about" with an About component
 ]);
 
