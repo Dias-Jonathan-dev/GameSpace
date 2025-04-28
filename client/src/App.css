@@ -133,7 +133,7 @@ table {
 :root {
   --bleu-clair: #343f63;
   --orange: #ff5500;
-  --font-heading: "Orbitron", sans-serif;
+  --font-heading: "Bruno Ace SC", sans-serif;
   --font-text: "Ubuntu", sans-serif;
 }
 
@@ -155,7 +155,7 @@ body {
 }
 
 .fav-nav {
-  height: 120px;
+  height: 70px;
   width: 120px;
   background: none;
   border: none;
@@ -185,13 +185,12 @@ body {
   color: white;
   display: flex;
   flex-direction: column;
-  border: solid 1px rgb(72, 97, 180);
+  border: solid 1px white;
 }
 
 .card-img {
-  height: 60%;
+  height: 75%;
   width: 100%;
-  overflow: hidden;
 }
 
 .card-img img {
@@ -204,29 +203,80 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 40%;
+  height: 25%;
   padding: 10px;
 }
 
 .card-info h3 {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: 700;
 }
 
 .card-info h4 {
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   color: var(--orange);
+  font-family: var(--font-text);
 }
 
 .platforms {
   display: flex;
-  flex-wrap: wrap;
+  height: 20px;
   gap: 8px;
   font-size: 0.75rem;
 }
 
 .rate {
   color: var(--orange);
+  font-family: var(--font-heading);
+  font-size: 0.8rem;
+}
+
+.platforms-rate {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+header {
+  background-image: url("assets/images/image-header-v2.png");
+  height: 80vh;
+  background-color: #2b2a34;
+  background-blend-mode: overlay;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
+}
+
+.header-text {
+  max-width: 40ch;
+  line-height: 1.5;
+}
+
+h1 {
+  color: var(--orange);
+  font-size: 2rem;
+  margin-bottom: 20px;
+  font-weight: 800;
+}
+
+.header-img {
+  width: 40vh;
+}
+
+@media screen and (min-width: 900px) {
+  header {
+    flex-direction: row;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  }
+
+  .header-img {
+    width: 80vh;
+  }
 }
 
 .searchbar {
@@ -260,6 +310,24 @@ body {
 .Search {
   display: flex;
   justify-content: center;
+}
+
+.topgames {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.card-body:hover {
+  transform: scale(1.2);
+  box-shadow: 0 10px 25px rgb(0, 0, 0, 0, 12);
+}
+
+h2 {
+  text-align: center;
+  font-size: 50px;
+  color: white;
+  margin-bottom: 20px;
 }
 
 .logo {

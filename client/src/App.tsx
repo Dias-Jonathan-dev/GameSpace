@@ -1,13 +1,18 @@
 import "./App.css";
 import Footer from "./components/Footer";
-import GameCard from "./components/GameCard";
+import GameCardsArea from "./components/GameCardsArea";
+import Header from "./components/Header";
 import NavBar from "./components/Navbar";
+import TopGames from "./components/TopGames";
 
 function App() {
   return (
     <>
       <NavBar />
-      <GameCard />
+      <Header />
+      <TopGames />
+      <h2>Nos jeux</h2>
+      <GameCardsArea />
       <Footer />
     </>
   );
