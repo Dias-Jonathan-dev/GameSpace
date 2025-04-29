@@ -7,6 +7,7 @@ import { RouterProvider, createBrowserRouter } from "react-router";
 
 // Import the main app component
 import App from "./App";
+import GameDetail from "./components/GameDetail";
 import Page404 from "./components/Page404";
 
 // Import additional components for new routes
@@ -23,6 +24,11 @@ const router = createBrowserRouter([
   {
     path: "/", // The root path
     element: <App />, // Renders the App component for the home page
+  },
+
+  {
+    path: "/jeu/:id",
+    element: <GameDetail />,
   },
 
   {
