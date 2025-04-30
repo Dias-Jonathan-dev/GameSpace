@@ -12,7 +12,6 @@ function App() {
       <NavBar />
       <Header />
       <TopGames />
-      <h2>Nos jeux</h2>
       <GameCardsArea />
       <Footer />
     </>

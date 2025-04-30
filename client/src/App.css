@@ -14,6 +14,11 @@ h6 {
   font-family: var(--font-heading);
 }
 
+h2 {
+  font-size: 2.2rem;
+  color: white;
+}
+
 p {
   font-family: var(--font-text);
 }
@@ -75,6 +80,14 @@ body {
 /* --- GAMECARDS --- */
 
 .games-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+}
+
+.suggested-cards {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
@@ -170,7 +183,7 @@ header {
   line-height: 1.5;
 }
 
-h1 {
+.header-text h1 {
   color: var(--orange);
   font-size: 2rem;
   margin-bottom: 20px;
@@ -195,9 +208,8 @@ h1 {
   box-shadow: 0 10px 25px rgb(0, 0, 0, 0, 12);
 }
 
-h2 {
+.topgames-container h2 {
   text-align: center;
-  font-size: 50px;
   color: white;
   margin-bottom: 20px;
 }
@@ -313,15 +325,15 @@ footer a {
   line-height: 1.5;
 }
 
-.detail-page h2 {
+.detail-game-info h2 {
   font-size: 1.5rem;
 }
 
-.detail-page h3 {
+.detail-game-info h3 {
   font-size: 1.8rem;
 }
 
-.detail-page h4 {
+.detail-game-info h4 {
   color: var(--orange);
   margin-bottom: 2rem;
 }
@@ -361,6 +373,22 @@ footer a {
   color: var(--orange);
 }
 
+/* --- SECTION SUGGESTIONS --- */
+
+.suggestion-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.suggestion-container h2 {
+  text-align: center;
+}
+
+.suggested-cards-scrollToTop {
+  all: unset;
+}
+
 @media screen and (min-width: 768px) {
   header {
     flex-direction: row;
@@ -377,5 +405,6 @@ footer a {
 
   .gallery {
     margin-top: -40vh;
+    margin-bottom: 15vh;
   }
 }
