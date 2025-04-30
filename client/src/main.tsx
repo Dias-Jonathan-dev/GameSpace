@@ -8,8 +8,8 @@ import { RouterProvider, createBrowserRouter } from "react-router";
 // Import the main app component
 import App from "./App";
 import Categories from "./components/Category";
-import Mention from "./components/MentionLegal";
 import GameDetail from "./components/GameDetail";
+import Mention from "./components/MentionLegal";
 import Page404 from "./components/Page404";
 
 // Import additional components for new routes
