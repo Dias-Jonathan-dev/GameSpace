@@ -1,7 +1,10 @@
+import { useState } from "react";
+import { Link } from "react-router";
 import Nintendo from "../assets/images/platforms/NintendoIcon.svg";
 import PcIcon from "../assets/images/platforms/PcIcon2.svg";
-import PcIcon2 from "../assets/images/platforms/PsIcon.svg";
+import PlaystationIcon from "../assets/images/platforms/PsIcon.svg";
 import xboxIcon from "../assets/images/platforms/XboxIcon.svg";
+import GameCard from "./GameCard";
 
 interface buttonsType {
   pc: string;
@@ -10,31 +13,63 @@ interface buttonsType {
   nintendo: string;
 }
 
+interface PlatformIdsType {
+  pc: number;
+  xbox: number;
+  playstation: number;
+  nintendo: number;
+}
+
 function ButtonsPlatform() {
-  const platform: buttonsType = {
+  const [games, setGames] = useState([]);
+
+  const platforms: buttonsType = {
     pc: PcIcon,
     xbox: xboxIcon,
-    playstation: PcIcon2,
+    playstation: PlaystationIcon,
     nintendo: Nintendo,
   };
 
+  const platformIds: PlatformIdsType = {
+    pc: 4,
+    xbox: 3,
+    playstation: 187,
+    nintendo: 7,
+  };
+
+  // const handleButtonClick = async (platformId: number) => {
+  //   try {
+  //     const response = await fetch(
+  //       `https://api.rawg.io/api/games?key=4bc0720168eb4f3a87dbdfbb61bc3461&platforms=${platformId}`,
+  //       {
+  //         method: "GET",
+  //       }
+  //     );
+  //     const data = await response.json();
+  //     setGames(data.results);
+  //     console.log(data.results);
+  //   } catch (error) {
+
+  //   }
+  // }
+
   return (
     <div className="buttons-platform">
-      <button type="button" className="btn-playstation button-platform">
-        <img src={platform.playstation} alt="playstation" />
-      </button>
+      <Link to={`/categories/${platformIds.playstation}`}>
+        <img src={platforms.playstation} alt="playstation" />
+      </Link>
 
-      <button type="button" className="btn-xbox button-platform">
-        <img src={platform.xbox} alt="xbox" />
-      </button>
+      <Link to={`/categories/${platformIds.xbox}`}>
+        <img src={platforms.xbox} alt="xbox" />
+      </Link>
 
-      <button type="button" className="btn-pc button-platform">
-        <img src={platform.pc} alt="pc" />
-      </button>
+      <Link to={`/categories/${platformIds.pc}`}>
+        <img src={platforms.pc} alt="pc" />
+      </Link>
 
-      <button type="button" className="btn-nintendo button-platform">
-        <img src={platform.nintendo} alt="nintendo" />
-      </button>
+      <Link to={`/categories/${platformIds.playstation}`}>
+        <img src={platforms.nintendo} alt="nintendo" />
+      </Link>
     </div>
   );
 }
