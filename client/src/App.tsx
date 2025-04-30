@@ -1,3 +1,4 @@
+import "../src/services/Reset.css";
 import "./App.css";
 import Footer from "./components/Footer";
 import GameCardsArea from "./components/GameCardsArea";
