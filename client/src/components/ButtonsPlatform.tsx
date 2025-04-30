@@ -1,10 +1,8 @@
-import { useState } from "react";
 import { Link } from "react-router";
 import Nintendo from "../assets/images/platforms/NintendoIcon.svg";
 import PcIcon from "../assets/images/platforms/PcIcon2.svg";
 import PlaystationIcon from "../assets/images/platforms/PsIcon.svg";
 import xboxIcon from "../assets/images/platforms/XboxIcon.svg";
-import GameCard from "./GameCard";
 
 interface buttonsType {
   pc: string;
@@ -21,8 +19,6 @@ interface PlatformIdsType {
 }
 
 function ButtonsPlatform() {
-  const [games, setGames] = useState([]);
-
   const platforms: buttonsType = {
     pc: PcIcon,
     xbox: xboxIcon,

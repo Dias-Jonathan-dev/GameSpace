@@ -4,7 +4,7 @@ import { useParams } from "react-router";
 function Category() {
   const { platformId } = useParams();
 
-  const [games, setGames] = useState([]);
+  const [_, setGames] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -27,7 +27,7 @@ function Category() {
     <div>
       <h1>Category</h1>
 
-      {/* <p>Platform ID: {platformId}</p> */}
+      <p>Platform ID: {platformId}</p>
     </div>
   );
 }
