@@ -224,6 +224,34 @@ body {
   font-family: var(--font-text);
 }
 
+.buttons-platform {
+  display: flex;
+  flex-direction: column;
+  width: 50px;
+  height: 50px;
+}
+
+.button-platform {
+  border-radius: 999px;
+}
+
+.btn-playstation {
+  background-color: black;
+}
+
+.btn-xbox {
+  background-color: green;
+}
+
+.btn-pc {
+  background-color: black;
+}
+
+.btn-nintendo {
+  background-color: blue;
+  width: 80px;
+}
+
 .platforms {
   display: flex;
   height: 20px;
@@ -299,7 +327,7 @@ h1 {
   margin: 0px auto;
 }
 
-@media screen and (min-width: 500px) and (max-width: 900px) {
+@media screen and (min-width: 400px) {
   .searchbar {
     display: flex;
     flex-direction: row;
@@ -336,6 +364,10 @@ h1 {
   display: flex;
   justify-content: center;
   gap: 20px;
+}
+
+.buttons-platform {
+  color: black;
 }
 
 .card-body:hover {

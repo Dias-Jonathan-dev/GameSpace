@@ -1,7 +1,7 @@
 import type { Game } from "../services/UseFetchGames";
 
 import NintendoIcon from "../assets/images/platforms/NintendoIcon.svg";
-import PcIcon from "../assets/images/platforms/PcIcon.svg";
+import PcIcon from "../assets/images/platforms/PcIcon2.svg";
 import PsIcon from "../assets/images/platforms/PsIcon.svg";
 import XboxIcon from "../assets/images/platforms/XboxIcon.svg";
 
