@@ -1,3 +1,4 @@
+import "../src/services/Reset.css";
 import "./App.css";
 import Categories from "./components/Category";
 import Footer from "./components/Footer";

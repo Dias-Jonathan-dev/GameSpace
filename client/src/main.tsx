@@ -9,6 +9,7 @@ import { RouterProvider, createBrowserRouter } from "react-router";
 import App from "./App";
 import Categories from "./components/Category";
 import Mention from "./components/MentionLegal";
+import GameDetail from "./components/GameDetail";
 import Page404 from "./components/Page404";
 
 // Import additional components for new routes
@@ -35,6 +36,11 @@ const router = createBrowserRouter([
   {
     path: "/mentions-legales",
     element: <Mention />,
+  },
+
+  {
+    path: "/jeu/:id",
+    element: <GameDetail />,
   },
 
   {

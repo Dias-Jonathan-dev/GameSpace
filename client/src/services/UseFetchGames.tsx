@@ -12,7 +12,7 @@ export interface Game {
   parent_platforms: { platform: { name: string; id: string } }[];
   genres: { name: string; image_background: string }[];
   esrb_rating: { name: string };
-  short_screenshots: { image: string }[];
+  short_screenshots: { image: string; id: number }[];
 }
 
 function UseFetchGames() {

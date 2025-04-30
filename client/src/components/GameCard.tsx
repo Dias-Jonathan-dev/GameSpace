@@ -1,3 +1,4 @@
+import { Link } from "react-router";
 import type { Game } from "../services/UseFetchGames";
 
 import NintendoIcon from "../assets/images/platforms/NintendoIcon.svg";
@@ -29,34 +30,35 @@ function GameCard({ game }: gameProps) {
   }
 
   return (
-    <div key={game.id} className="card-body">
-      <div className="card-img">
-        <img src={game.background_image} alt={game.name} />
-      </div>
-      <div className="card-info">
-        <h3>{game.name}</h3>
-        <h4>{game.genres[0].name}</h4>
-        <div className="platforms-rate">
-          <div className="platforms">
-            {game.parent_platforms
-              .filter((elem) => isPlatformKey(elem.platform.name))
-              .map((elem) => (
-                <img
-                  key={elem.platform.id}
-                  src={
-                    platformIcons[elem.platform.name as keyof PlatformIconsType]
-                  }
-                  alt=""
-                />
-              ))}
+    <Link to={`/jeu/${game.id}`} className="card-link">
+      <div key={game.id} className="card-body">
+        <div className="card-img">
+          <img src={game.background_image} alt={game.name} />
+        </div>
+        <div className="card-info">
+          <h3>{game.name}</h3>
+          <h4>{game.genres[0].name}</h4>
+          <div className="platforms-rate">
+            <div className="platforms">
+              {game.parent_platforms
+                .filter((elem) => isPlatformKey(elem.platform.name))
+                .map((elem) => (
+                  <img
+                    key={elem.platform.id}
+                    src={
+                      platformIcons[
+                        elem.platform.name as keyof PlatformIconsType
+                      ]
+                    }
+                    alt=""
+                  />
+                ))}
+            </div>
+            <p className="rate">{game.rating}/5</p>
           </div>
-
-          <p className="rate">
-            {game.rating}/{game.rating_top}
-          </p>
         </div>
       </div>
-    </div>
+    </Link>
   );
 }
 
