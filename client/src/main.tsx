@@ -7,6 +7,7 @@ import { RouterProvider, createBrowserRouter } from "react-router";
 
 // Import the main app component
 import App from "./App";
+import Categories from "./components/Category";
 import Mention from "./components/MentionLegal";
 import Page404 from "./components/Page404";
 
@@ -27,11 +28,19 @@ const router = createBrowserRouter([
   },
 
   {
+    path: "/genres/:id",
+    element: <Categories />,
+  },
+
+  {
+    path: "/mentions-legales",
+    element: <Mention />,
+  },
+
+  {
     path: "/*",
     element: <Page404 />,
   },
-
-  { path: "/mentions-legales", element: <Mention /> },
   // Try adding a new route! For example, "/about" with an About component
 ]);
 
