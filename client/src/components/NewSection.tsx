@@ -15,7 +15,7 @@ function NewSection() {
     if (sortedGames.length > 0) {
       setMainImage(sortedGames[0]);
     }
-  }, [games]);
+  }, [sortedGames[0]]);
 
   return (
     <>
