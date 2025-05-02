@@ -1,7 +1,7 @@
 import { Link } from "react-router";
+import assassin from "../assets/images/assassin.png";
 import Footer from "./Footer";
 import NavBar from "./Navbar";
-import assassin from "../assets/images/assassin.png";
 
 function Page404() {
   return (
