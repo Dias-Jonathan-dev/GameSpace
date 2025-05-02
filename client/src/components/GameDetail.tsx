@@ -8,6 +8,7 @@ import PsIcon from "../assets/images/platforms/PsIcon.svg";
 import XboxIcon from "../assets/images/platforms/XboxIcon.svg";
 import Footer from "./Footer";
 import NavBar from "./Navbar";
+import Suggestion from "./Suggestion";
 
 function GameDetail() {
   const { id } = useParams<{ id: string }>();
@@ -120,8 +121,7 @@ function GameDetail() {
           </div>
         </section>
         <section className="detail-suggestion">
-          <h2>Découvrez des titres similaires :</h2>
-          {/* Prévoir une feature de suggestions ci-dessous */}
+          <Suggestion />
         </section>
       </div>
       <Footer />

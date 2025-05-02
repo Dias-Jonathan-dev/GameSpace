@@ -14,7 +14,6 @@ function App() {
       <Header />
       <Categories />
       <TopGames />
-      <h2>Nos jeux</h2>
       <GameCardsArea />
       <Footer />
     </>
