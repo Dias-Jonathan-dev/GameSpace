@@ -3,12 +3,11 @@ import NavBar from "./Navbar";
 
 function Mention() {
   return (
-    <div>
+    <div className="mention-legales-page">
       <NavBar />
-
       <div className="Mention-legales">
         <h1> Mentions Légales</h1>
-        <h2>Éditeur du site</h2>
+        <h3>Éditeur du site</h3>
         <p>
           Le présent site est édité par : <br />
           <strong>Nom de l'entreprise / Nom du propriétaire :</strong> Ton Nom

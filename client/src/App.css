@@ -15,8 +15,9 @@ h6 {
 }
 
 h2 {
-  font-size: 2.2rem;
+  font-size: 2.9rem;
   color: white;
+  margin-bottom: 1.5rem;
 }
 
 p {
@@ -42,41 +43,6 @@ body {
   background-color: var(--bleu-clair);
   padding: 1rem 2rem;
   align-items: center;
-}
-
-/* --- SEARCHBAR --- */
-
-.searchbar {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  right: 14em;
-  width: 30rem;
-  height: 3rem;
-  gap: 10px;
-  margin-bottom: 1rem;
-  background-color: orange;
-  border-radius: 30px;
-}
-
-.searchbar input {
-  background-color: transparent;
-  border: none;
-}
-
-.searchbar ::placeholder {
-  color: rgb(248, 229, 204);
-  font-size: 1.1rem;
-}
-
-.loupe {
-  height: 2rem;
-  opacity: 0.8;
-}
-
-.Search {
-  display: flex;
-  justify-content: center;
 }
 
 /* --- GAMECARDS --- */
@@ -213,7 +179,7 @@ header {
   width: 30rem;
   height: 2.5rem;
   gap: 10px;
-  background-color: orange;
+  background-color: var(--orange);
   border-radius: 30px;
   padding: 0 20px;
   margin: 0px auto;
@@ -291,6 +257,10 @@ footer a {
   color: white;
 }
 
+.mention-link {
+  font-family: var(--font-text);
+}
+
 /*  ----------- Page 404 -------------- */
 
 /* --- PAGE 404 --- */
@@ -350,7 +320,7 @@ footer a {
   scroll-snap-align: start;
   border-radius: 1em;
   overflow: hidden;
-  background: #111827;
+  background: var(--bleu-clair);
   color: var(--orange);
   margin-bottom: 2rem;
 }
@@ -374,10 +344,10 @@ footer a {
 }
 
 .genre-name {
-  background-color: var(--bleu-clair);
   padding: 1em;
   text-align: center;
   font-weight: bold;
+  font-family: var(--font-text);
 }
 
 /*--------------  section page Mention Legal -------------*/
@@ -385,6 +355,24 @@ footer a {
   color: white;
   padding: 5vw; /* padding fluide en fonction de la largeur de l’écran */
   max-width: 100%;
+  line-height: 1.5;
+}
+
+.mention-legales-page {
+  min-height: 100vh;
+}
+
+.Mention-legales h3 {
+  margin-top: 2rem;
+  color: var(--orange);
+}
+
+.Mention-legales h1 {
+  font-size: 1.5rem;
+}
+
+.Mention-legales p {
+  max-width: 90ch;
 }
 
 /* --- PAGE DETAILS JEU --- */
@@ -642,13 +630,6 @@ footer a {
     width: 60vw;
   }
 
-  .Mention-legales {
-    color: white;
-    padding: 5vw;
-    /* padding fluide en fonction de la largeur de l’écran */
-    max-width: 100%;
-  }
-
   .back-home-link {
     font-size: 2.2vw;
     /* taille relative à la largeur de l’écran */
@@ -657,27 +638,30 @@ footer a {
     display: flex;
   }
 
-  .Mention-legales h1 {
-    font-size: 6vw;
-    /* taille adaptative */
-    margin-bottom: 2vh;
+  .category-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
-  .Mention-legales h2 {
-    font-size: 4.5vw;
-    margin-top: 3vh;
-    margin-bottom: 2vh;
+  .horizontal-scroll {
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 75vw;
   }
 
-  .Mention-legales h3 {
-    font-size: 2vw;
-    margin-top: 2.5vh;
-    margin-bottom: 1vh;
+  .genre-item {
+    width: 250px;
+    opacity: 0.8;
   }
 
-  .Mention-legales p {
-    font-size: 1.4vw;
-    line-height: 1.6;
-    margin-bottom: 2vh;
+  .genre-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgb(0, 0, 0, 0, 12);
+    opacity: 1;
+  }
+
+  .genre-name {
+    font-size: 1.2rem;
   }
 }
