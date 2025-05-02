@@ -33,22 +33,6 @@ function ButtonsPlatform() {
     nintendo: 7,
   };
 
-  // const handleButtonClick = async (platformId: number) => {
-  //   try {
-  //     const response = await fetch(
-  //       `https://api.rawg.io/api/games?key=4bc0720168eb4f3a87dbdfbb61bc3461&platforms=${platformId}`,
-  //       {
-  //         method: "GET",
-  //       }
-  //     );
-  //     const data = await response.json();
-  //     setGames(data.results);
-  //     console.log(data.results);
-  //   } catch (error) {
-
-  //   }
-  // }
-
   return (
     <div className="buttons-platform">
       <div className="button-playstation">
