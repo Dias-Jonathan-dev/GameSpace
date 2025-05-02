@@ -34,17 +34,22 @@ const Categories = () => {
   if (error) return <p>{error}</p>;
 
   return (
-    <div className="genres-list">
-      {genres?.map((genre) => (
-        <div key={genre.id} className="genre-item">
-          <img
-            src={genre.image_background}
-            alt={genre.name}
-            className="genre-image"
-          />
-          <h2 className="genre-name">{genre.name}</h2>
-        </div>
-      ))}
+    <div>
+      <h1>Les catégories</h1>
+      <div className="horizontal-scroll">
+        {genres?.map((genre) => (
+          <div key={genre.id} className="genre-item">
+            <div className="genre-image-wrapper">
+              <img
+                src={genre.image_background}
+                alt={genre.name}
+                className="genre-image"
+              />
+              <div className="genre-name">{genre.name}</div>
+            </div>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
