@@ -8,6 +8,7 @@ import PsIcon from "../assets/images/platforms/PsIcon.svg";
 import XboxIcon from "../assets/images/platforms/XboxIcon.svg";
 import Footer from "./Footer";
 import NavBar from "./Navbar";
+import Suggestion from "./Suggestion";
 
 function GameDetail() {
   const { id } = useParams<{ id: string }>();
@@ -28,14 +29,33 @@ function GameDetail() {
 
   useEffect(() => {
     const fetchGameDescription = async () => {
+      const cacheKey = `game-${id}`;
+      const cached = localStorage.getItem(cacheKey);
+      const cacheTime = localStorage.getItem(`${cacheKey}-timestamp`);
+
+      const sixHours = 6 * 60 * 60 * 1000;
+
+      if (
+        cached &&
+        cacheTime &&
+        Date.now() - Number.parseInt(cacheTime) < sixHours
+      ) {
+        const parsed = JSON.parse(cached);
+        setDescription(parsed.description);
+        return;
+      }
+
       try {
         const response = await fetch(
-          `https://api.rawg.io/api/games/${id}?key=c2c6c63b04bb4cd499f80941c741a62e`,
+          `https://api.rawg.io/api/games/${id}?key=4bc0720168eb4f3a87dbdfbb61bc3461`,
         );
         const data = await response.json();
+
         setDescription(data.description);
+        localStorage.setItem(cacheKey, JSON.stringify(data));
+        localStorage.setItem(`${cacheKey}-timestamp`, Date.now().toString());
       } catch (error) {
-        console.error("Erreur lors de la récupération des détails du jeu :");
+        console.error("Erreur lors du fetch :", error);
       }
     };
 
@@ -120,8 +140,7 @@ function GameDetail() {
           </div>
         </section>
         <section className="detail-suggestion">
-          <h2>Découvrez des titres similaires :</h2>
-          {/* Prévoir une feature de suggestions ci-dessous */}
+          <Suggestion />
         </section>
       </div>
       <Footer />
