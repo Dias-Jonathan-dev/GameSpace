@@ -51,21 +51,29 @@ function ButtonsPlatform() {
 
   return (
     <div className="buttons-platform">
-      <Link to={`/categories/${platformIds.playstation}`}>
-        <img src={platforms.playstation} alt="playstation" />
-      </Link>
+      <div className="button-playstation">
+        <Link to={`/categories/${platformIds.playstation}`}>
+          <img src={platforms.playstation} alt="playstation" />
+        </Link>
+      </div>
 
-      <Link to={`/categories/${platformIds.xbox}`}>
-        <img src={platforms.xbox} alt="xbox" />
-      </Link>
+      <div className="button-xbox">
+        <Link to={`/categories/${platformIds.xbox}`}>
+          <img src={platforms.xbox} alt="xbox" />
+        </Link>
+      </div>
 
-      <Link to={`/categories/${platformIds.pc}`}>
-        <img src={platforms.pc} alt="pc" />
-      </Link>
+      <div className="button-pc">
+        <Link to={`/categories/${platformIds.pc}`}>
+          <img src={platforms.pc} alt="pc" />
+        </Link>
+      </div>
 
-      <Link to={`/categories/${platformIds.playstation}`}>
-        <img src={platforms.nintendo} alt="nintendo" />
-      </Link>
+      <div className="button-nintendo">
+        <Link to={`/categories/${platformIds.nintendo}`}>
+          <img src={platforms.nintendo} alt="nintendo" />
+        </Link>
+      </div>
     </div>
   );
 }

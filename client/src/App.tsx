@@ -1,3 +1,4 @@
+import "../src/services/Reset.css";
 import "./App.css";
 import ButtonsPlaform from "./components/ButtonsPlatform";
 import Footer from "./components/Footer";
@@ -11,8 +12,8 @@ function App() {
     <>
       <NavBar />
       <Header />
-      <TopGames />
       <ButtonsPlaform />
+      <TopGames />
       <h2>Nos jeux</h2>
       <GameCardsArea />
       <Footer />
