@@ -332,16 +332,7 @@ header {
   width: 40vh;
 }
 
-@media screen and (min-width: 900px) {
-  header {
-    flex-direction: row;
-    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
-  }
-
-  .header-img {
-    width: 80vh;
-  }
-}
+/* --- SEARCHBAR --- */
 
 .searchbar {
   display: flex;
@@ -388,6 +379,8 @@ header {
   justify-content: center;
 }
 
+/* --- TOPGAMES --- */
+
 .topgames {
   display: flex;
   justify-content: center;
@@ -405,6 +398,7 @@ header {
   color: white;
   margin-bottom: 20px;
 }
+
 /* ------------------- Footer ------------*/
 
 .logo {
@@ -438,11 +432,13 @@ footer a {
   background-position: center;
   background-size: 50vh;
 }
+
 .Error-txt h1 {
   margin-top: 10vh;
   color: #ff5500;
   text-align: center;
 }
+
 .Error-txt p {
   color: white;
 }
@@ -456,6 +452,7 @@ footer a {
   height: 30vh;
   width: 100%;
 }
+
 .genre-image {
   display: flex;
   flex-direction: column;
@@ -466,45 +463,6 @@ footer a {
 .genre-name {
   font-size: 0.8rem;
   font-weight: 500;
-}
-
-/*--------------  section page Mention Legal -------------*/
-
-@media screen and (min-width: 768px) {
-  .Mention-legales {
-    color: white;
-    padding: 5vw; /* padding fluide en fonction de la largeur de l’écran */
-    max-width: 100%;
-  }
-
-  .back-home-link {
-    font-size: 2.2vw; /* taille relative à la largeur de l’écran */
-    padding: 2vw 3vw; /* padding fluide */
-    display: flex;
-  }
-
-  .Mention-legales h1 {
-    font-size: 6vw; /* taille adaptative */
-    margin-bottom: 2vh;
-  }
-
-  .Mention-legales h2 {
-    font-size: 4.5vw;
-    margin-top: 3vh;
-    margin-bottom: 2vh;
-  }
-
-  .Mention-legales h3 {
-    font-size: 2vw;
-    margin-top: 2.5vh;
-    margin-bottom: 1vh;
-  }
-
-  .Mention-legales p {
-    font-size: 1.4vw;
-    line-height: 1.6;
-    margin-bottom: 2vh;
-  }
 }
 
 /* --- PAGE DETAILS JEU --- */
@@ -754,5 +712,44 @@ footer a {
 
   .thumbnails-news-galery {
     width: 60vw;
+  }
+
+  .Mention-legales {
+    color: white;
+    padding: 5vw;
+    /* padding fluide en fonction de la largeur de l’écran */
+    max-width: 100%;
+  }
+
+  .back-home-link {
+    font-size: 2.2vw;
+    /* taille relative à la largeur de l’écran */
+    padding: 2vw 3vw;
+    /* padding fluide */
+    display: flex;
+  }
+
+  .Mention-legales h1 {
+    font-size: 6vw;
+    /* taille adaptative */
+    margin-bottom: 2vh;
+  }
+
+  .Mention-legales h2 {
+    font-size: 4.5vw;
+    margin-top: 3vh;
+    margin-bottom: 2vh;
+  }
+
+  .Mention-legales h3 {
+    font-size: 2vw;
+    margin-top: 2.5vh;
+    margin-bottom: 1vh;
+  }
+
+  .Mention-legales p {
+    font-size: 1.4vw;
+    line-height: 1.6;
+    margin-bottom: 2vh;
   }
 }
