@@ -1,5 +1,6 @@
 import "../src/services/Reset.css";
 import "./App.css";
+import Categories from "./components/Category";
 import Footer from "./components/Footer";
 import GameCardsArea from "./components/GameCardsArea";
 import Header from "./components/Header";
@@ -13,6 +14,7 @@ function App() {
       <NavBar />
       <Header />
       <NewSection />
+      <Categories />
       <TopGames />
       <GameCardsArea />
       <Footer />
