@@ -416,7 +416,8 @@ footer {
   display: flex;
   align-items: center;
   color: white;
-  padding: 10px;
+  padding: 1rem;
+  justify-content: space-between;
 }
 
 footer a {
@@ -427,10 +428,12 @@ footer a {
 /*  ----------- Page 404 -------------- */
 
 /* --- PAGE 404 --- */
-
+.Page404 img {
+  width: 95vw;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
 .Page404 {
-  background-image: url("./assets/images/assassin.png");
-  height: 90vh;
   background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
@@ -446,30 +449,68 @@ footer a {
 .Error-txt p {
   color: white;
 }
+.back-home-link {
+  text-decoration: none;
+  color: white;
+  background-color: var(--orange);
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 2rem;
+}
 
 /* --------- section categorie de jeux -------- */
-
-.genres-list {
+.horizontal-scroll {
   display: flex;
-  flex-direction: column;
-  gap: 12px;
-  height: 30vh;
-  width: 100%;
+  overflow-x: auto;
+  gap: 1em;
+  padding: 1em;
+  scroll-snap-type: x mandatory;
 }
-.genre-image {
+h1 {
+  padding-left: 2em;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+
+.genre-item {
+  flex: 0 0 auto;
+  width: 12em;
+  scroll-snap-align: start;
+  border-radius: 1em;
+  overflow: hidden;
+  background: #111827;
+  color: var(--orange);
+  margin-bottom: 2rem;
+}
+
+.genre-image-wrapper {
+  aspect-ratio: 4 / 3;
+  width: 100%;
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  height: 30vh;
+  justify-content: flex-end;
+}
+
+.genre-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  flex-grow: 1;
 }
 
 .genre-name {
-  font-size: 0.8rem;
-  font-weight: 500;
+  background-color: var(--bleu-clair);
+  padding: 1em;
+  text-align: center;
+  font-weight: bold;
 }
 
 /*--------------  section page Mention Legal -------------*/
-
+.Mention-legales {
+  color: white;
+  padding: 5vw; /* padding fluide en fonction de la largeur de l’écran */
+  max-width: 100%;
+}
 @media screen and (min-width: 768px) {
   .Mention-legales {
     color: white;
