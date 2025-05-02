@@ -1,141 +1,3 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font-style: inherit;
-  vertical-align: baseline;
-}
-
-/* HTML5 display-role reset for older browsers */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-  display: block;
-}
-
-body {
-  line-height: 1;
-}
-
-ol,
-ul {
-  list-style: none;
-}
-
-blockquote,
-q {
-  quotes: none;
-}
-
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-  content: "";
-  content: none;
-}
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-/* --------- RESET CSS -------- */
-
 :root {
   --bleu-clair: #343f63;
   --orange: #ff5500;
@@ -176,8 +38,10 @@ body {
 }
 
 .navbar {
+  display: flex;
   background-color: var(--bleu-clair);
-  padding: 0 40px;
+  padding: 1rem 2rem;
+  align-items: center;
 }
 
 /* --- SEARCHBAR --- */
@@ -303,7 +167,7 @@ body {
 
 header {
   background-image: url("assets/images/image-header-v2.png");
-  height: 80vh;
+  height: 60vh;
   background-color: #2b2a34;
   background-blend-mode: overlay;
   background-size: cover;
@@ -311,12 +175,14 @@ header {
   color: white;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
+  gap: 2rem;
   clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
 }
 
 .header-text {
+  text-align: center;
   max-width: 40ch;
   line-height: 1.5;
 }
@@ -330,6 +196,11 @@ header {
 
 .header-img {
   width: 40vh;
+}
+
+.text-orange {
+  color: var(--orange);
+  font-weight: 700;
 }
 
 /* --- SEARCHBAR --- */
@@ -412,6 +283,7 @@ footer {
   color: white;
   padding: 1rem;
   justify-content: space-between;
+  margin-top: 3rem;
 }
 
 footer a {
@@ -462,10 +334,14 @@ footer a {
   padding: 1em;
   scroll-snap-type: x mandatory;
 }
-h1 {
-  padding-left: 2em;
+
+.category-section {
   margin-bottom: 2rem;
-  margin-top: 2rem;
+}
+
+.category-section h2 {
+  color: white;
+  text-align: center;
 }
 
 .genre-item {
@@ -509,42 +385,6 @@ h1 {
   color: white;
   padding: 5vw; /* padding fluide en fonction de la largeur de l’écran */
   max-width: 100%;
-}
-@media screen and (min-width: 768px) {
-  .Mention-legales {
-    color: white;
-    padding: 5vw; /* padding fluide en fonction de la largeur de l’écran */
-    max-width: 100%;
-  }
-
-  .back-home-link {
-    font-size: 2.2vw; /* taille relative à la largeur de l’écran */
-    padding: 2vw 3vw; /* padding fluide */
-    display: flex;
-  }
-
-  .Mention-legales h1 {
-    font-size: 6vw; /* taille adaptative */
-    margin-bottom: 2vh;
-  }
-
-  .Mention-legales h2 {
-    font-size: 4.5vw;
-    margin-top: 3vh;
-    margin-bottom: 2vh;
-  }
-
-  .Mention-legales h3 {
-    font-size: 2vw;
-    margin-top: 2.5vh;
-    margin-bottom: 1vh;
-  }
-
-  .Mention-legales p {
-    font-size: 1.4vw;
-    line-height: 1.6;
-    margin-bottom: 2vh;
-  }
 }
 
 /* --- PAGE DETAILS JEU --- */
@@ -763,8 +603,14 @@ h1 {
 
 @media screen and (min-width: 768px) {
   header {
+    height: 80vh;
     flex-direction: row;
+    justify-content: space-around;
     clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  }
+
+  .header-text p {
+    font-size: 1.2rem;
   }
 
   .header-img {
