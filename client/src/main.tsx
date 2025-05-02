@@ -7,7 +7,9 @@ import { RouterProvider, createBrowserRouter } from "react-router";
 
 // Import the main app component
 import App from "./App";
+import Categories from "./components/Category";
 import GameDetail from "./components/GameDetail";
+import Mention from "./components/MentionLegal";
 import Page404 from "./components/Page404";
 
 // Import additional components for new routes
@@ -24,6 +26,16 @@ const router = createBrowserRouter([
   {
     path: "/", // The root path
     element: <App />, // Renders the App component for the home page
+  },
+
+  {
+    path: "/genres/:id",
+    element: <Categories />,
+  },
+
+  {
+    path: "/mentions-legales",
+    element: <Mention />,
   },
 
   {
