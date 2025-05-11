@@ -52,8 +52,7 @@ function SearchBar() {
       <div className="games-cards">
         {filteredGames.map((game) => (
           <div key={game.id}>
-            <GameCard game={game} />
-          </div>
+        </div>
         ))}
       </div>
     </>

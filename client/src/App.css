@@ -41,19 +41,13 @@ body {
 .navbar {
   display: flex;
   background-color: var(--bleu-clair);
-  padding: 1rem 2rem;
+  padding: 1rem 1rem;
   align-items: center;
+  justify-content: space-between;
+  gap: 5vw;
 }
 
 /* --- GAMECARDS --- */
-
-.games-cards {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-  padding: 20px;
-}
 
 .suggested-cards {
   display: flex;
@@ -61,6 +55,7 @@ body {
   gap: 20px;
   justify-content: center;
   padding: 20px;
+  max-width: 80vw;
 }
 
 .card-body {
@@ -175,24 +170,12 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  right: 14em;
-  width: 30rem;
+  width: 50vw;
   height: 2.5rem;
   gap: 10px;
   background-color: var(--orange);
   border-radius: 30px;
   padding: 0 20px;
-  margin: 0px auto;
-}
-
-.searchbar {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
-  width: 300px;
-  height: 50px;
 }
 
 .searchbar input {
@@ -326,14 +309,17 @@ footer a {
 }
 
 .genre-image-wrapper {
-  aspect-ratio: 4 / 3;
-  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
 }
 
 .genre-image {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
 }
 
 .genre-image {
@@ -347,7 +333,9 @@ footer a {
   padding: 1em;
   text-align: center;
   font-weight: bold;
-  font-family: var(--font-text);
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  width: 100%;
 }
 
 /*--------------  section page Mention Legal -------------*/
@@ -521,6 +509,7 @@ footer a {
   all: unset;
 }
 
+
 /* --- GALLERIE NOUVEAUTES--- */
 
 /* SECTION GÉNÉRALE */
@@ -663,5 +652,13 @@ footer a {
 
   .genre-name {
     font-size: 1.2rem;
+  }
+
+  .navbar {
+    justify-content: space-around;
+  }
+
+  .searchbar {
+    width: 20vw;
   }
 }
