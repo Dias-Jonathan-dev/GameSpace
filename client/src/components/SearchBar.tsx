@@ -2,7 +2,6 @@ import type React from "react";
 import { useEffect, useState } from "react";
 import loupe_search from "../assets/images/loupe_search.svg";
 import type { Game } from "../services/UseFetchGames";
-import GameCard from "./GameCard";
 
 function SearchBar() {
   const [games, setGames] = useState<Game[]>([]);
@@ -51,8 +50,7 @@ function SearchBar() {
       </div>
       <div className="games-cards">
         {filteredGames.map((game) => (
-          <div key={game.id}>
-        </div>
+          <div key={game.id} />
         ))}
       </div>
     </>
