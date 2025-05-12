@@ -6,8 +6,8 @@ import GameCardsArea from "./components/GameCardsArea";
 import Header from "./components/Header";
 import NavBar from "./components/Navbar";
 import NewSection from "./components/NewSection";
-import TopGames from "./components/TopGames";
 import Pub from "./components/Pub";
+import TopGames from "./components/TopGames";
 
 function App() {
   return (

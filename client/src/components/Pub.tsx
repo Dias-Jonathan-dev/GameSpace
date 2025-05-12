@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
-import type { Game } from "../services/UseFetchGames";
 import { Link } from "react-router";
+import NintendoIcon from "../assets/images/platforms/NintendoIcon.svg";
 import PcIcon from "../assets/images/platforms/PcIcon.svg";
 import PsIcon from "../assets/images/platforms/PsIcon.svg";
 import XboxIcon from "../assets/images/platforms/XboxIcon.svg";
-import NintendoIcon from "../assets/images/platforms/NintendoIcon.svg";
+import type { Game } from "../services/UseFetchGames";
 
 function Pub() {
   const [game, setGame] = useState<Game>();
