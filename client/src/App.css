@@ -1,141 +1,3 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font-style: inherit;
-  vertical-align: baseline;
-}
-
-/* HTML5 display-role reset for older browsers */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-  display: block;
-}
-
-body {
-  line-height: 1;
-}
-
-ol,
-ul {
-  list-style: none;
-}
-
-blockquote,
-q {
-  quotes: none;
-}
-
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-  content: "";
-  content: none;
-}
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-/* --------- RESET CSS -------- */
-
 :root {
   --bleu-clair: #343f63;
   --orange: #ff5500;
@@ -153,8 +15,9 @@ h6 {
 }
 
 h2 {
-  font-size: 2.2rem;
+  font-size: 2.9rem;
   color: white;
+  margin-bottom: 1.5rem;
 }
 
 p {
@@ -176,54 +39,15 @@ body {
 }
 
 .navbar {
+  display: flex;
   background-color: var(--bleu-clair);
-  padding: 0 40px;
-}
-
-/* --- SEARCHBAR --- */
-
-.searchbar {
-  display: flex;
+  padding: 1rem 1rem;
   align-items: center;
-  justify-content: center;
-  right: 14em;
-  width: 30rem;
-  height: 3rem;
-  gap: 10px;
-  margin-bottom: 1rem;
-  background-color: orange;
-  border-radius: 30px;
-}
-
-.searchbar input {
-  background-color: transparent;
-  border: none;
-}
-
-.searchbar ::placeholder {
-  color: rgb(248, 229, 204);
-  font-size: 1.1rem;
-}
-
-.loupe {
-  height: 2rem;
-  opacity: 0.8;
-}
-
-.Search {
-  display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  gap: 5vw;
 }
 
 /* --- GAMECARDS --- */
-
-.games-cards {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-  padding: 20px;
-}
 
 .suggested-cards {
   display: flex;
@@ -231,6 +55,7 @@ body {
   gap: 20px;
   justify-content: center;
   padding: 20px;
+  max-width: 80vw;
 }
 
 .card-body {
@@ -303,7 +128,7 @@ body {
 
 header {
   background-image: url("assets/images/image-header-v2.png");
-  height: 80vh;
+  height: 60vh;
   background-color: #2b2a34;
   background-blend-mode: overlay;
   background-size: cover;
@@ -311,12 +136,14 @@ header {
   color: white;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
+  gap: 2rem;
   clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
 }
 
 .header-text {
+  text-align: center;
   max-width: 40ch;
   line-height: 1.5;
 }
@@ -332,39 +159,23 @@ header {
   width: 40vh;
 }
 
-@media screen and (min-width: 900px) {
-  header {
-    flex-direction: row;
-    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
-  }
-
-  .header-img {
-    width: 80vh;
-  }
+.text-orange {
+  color: var(--orange);
+  font-weight: 700;
 }
+
+/* --- SEARCHBAR --- */
 
 .searchbar {
   display: flex;
   align-items: center;
   justify-content: center;
-  right: 14em;
-  width: 30rem;
+  width: 50vw;
   height: 2.5rem;
   gap: 10px;
-  background-color: orange;
+  background-color: var(--orange);
   border-radius: 30px;
   padding: 0 20px;
-  margin: 0px auto;
-}
-
-.searchbar {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
-  width: 300px;
-  height: 50px;
 }
 
 .searchbar input {
@@ -388,6 +199,8 @@ header {
   justify-content: center;
 }
 
+/* --- TOPGAMES --- */
+
 .topgames {
   display: flex;
   justify-content: center;
@@ -405,6 +218,7 @@ header {
   color: white;
   margin-bottom: 20px;
 }
+
 /* ------------------- Footer ------------*/
 
 .logo {
@@ -418,11 +232,16 @@ footer {
   color: white;
   padding: 1rem;
   justify-content: space-between;
+  margin-top: 3rem;
 }
 
 footer a {
   text-decoration: none;
   color: white;
+}
+
+.mention-link {
+  font-family: var(--font-text);
 }
 
 /*  ----------- Page 404 -------------- */
@@ -441,11 +260,13 @@ footer a {
   background-position: center;
   background-size: 50vh;
 }
+
 .Error-txt h1 {
   margin-top: 10vh;
   color: #ff5500;
   text-align: center;
 }
+
 .Error-txt p {
   color: white;
 }
@@ -466,10 +287,14 @@ footer a {
   padding: 1em;
   scroll-snap-type: x mandatory;
 }
-h1 {
-  padding-left: 2em;
+
+.category-section {
   margin-bottom: 2rem;
-  margin-top: 2rem;
+}
+
+.category-section h2 {
+  color: white;
+  text-align: center;
 }
 
 .genre-item {
@@ -478,17 +303,23 @@ h1 {
   scroll-snap-align: start;
   border-radius: 1em;
   overflow: hidden;
-  background: #111827;
+  background: var(--bleu-clair);
   color: var(--orange);
   margin-bottom: 2rem;
 }
 
 .genre-image-wrapper {
-  aspect-ratio: 4 / 3;
-  width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.genre-image {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
 }
 
 .genre-image {
@@ -499,10 +330,12 @@ h1 {
 }
 
 .genre-name {
-  background-color: var(--bleu-clair);
   padding: 1em;
   text-align: center;
   font-weight: bold;
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  width: 100%;
 }
 
 /*--------------  section page Mention Legal -------------*/
@@ -510,42 +343,24 @@ h1 {
   color: white;
   padding: 5vw; /* padding fluide en fonction de la largeur de l’écran */
   max-width: 100%;
+  line-height: 1.5;
 }
-@media screen and (min-width: 768px) {
-  .Mention-legales {
-    color: white;
-    padding: 5vw; /* padding fluide en fonction de la largeur de l’écran */
-    max-width: 100%;
-  }
 
-  .back-home-link {
-    font-size: 2.2vw; /* taille relative à la largeur de l’écran */
-    padding: 2vw 3vw; /* padding fluide */
-    display: flex;
-  }
+.mention-legales-page {
+  min-height: 100vh;
+}
 
-  .Mention-legales h1 {
-    font-size: 6vw; /* taille adaptative */
-    margin-bottom: 2vh;
-  }
+.Mention-legales h3 {
+  margin-top: 2rem;
+  color: var(--orange);
+}
 
-  .Mention-legales h2 {
-    font-size: 4.5vw;
-    margin-top: 3vh;
-    margin-bottom: 2vh;
-  }
+.Mention-legales h1 {
+  font-size: 1.5rem;
+}
 
-  .Mention-legales h3 {
-    font-size: 2vw;
-    margin-top: 2.5vh;
-    margin-bottom: 1vh;
-  }
-
-  .Mention-legales p {
-    font-size: 1.4vw;
-    line-height: 1.6;
-    margin-bottom: 2vh;
-  }
+.Mention-legales p {
+  max-width: 90ch;
 }
 
 /* --- PAGE DETAILS JEU --- */
@@ -803,8 +618,14 @@ h1 {
 
 @media screen and (min-width: 768px) {
   header {
+    height: 80vh;
     flex-direction: row;
+    justify-content: space-around;
     clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  }
+
+  .header-text p {
+    font-size: 1.2rem;
   }
 
   .header-img {
@@ -834,6 +655,49 @@ h1 {
 
   .thumbnails-news-galery {
     width: 60vw;
+  }
+
+  .back-home-link {
+    font-size: 2.2vw;
+    /* taille relative à la largeur de l’écran */
+    padding: 2vw 3vw;
+    /* padding fluide */
+    display: flex;
+  }
+
+  .category-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .horizontal-scroll {
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 75vw;
+  }
+
+  .genre-item {
+    width: 250px;
+    opacity: 0.8;
+  }
+
+  .genre-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgb(0, 0, 0, 0, 12);
+    opacity: 1;
+  }
+
+  .genre-name {
+    font-size: 1.2rem;
+  }
+
+  .navbar {
+    justify-content: space-around;
+  }
+
+  .searchbar {
+    width: 20vw;
   }
 
   .pub {
