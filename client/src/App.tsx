@@ -5,6 +5,7 @@ import Footer from "./components/Footer";
 import Header from "./components/Header";
 import NavBar from "./components/Navbar";
 import NewSection from "./components/NewSection";
+import Pub from "./components/Pub";
 import TopGames from "./components/TopGames";
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
       <NewSection />
       <Categories />
       <TopGames />
+      <Pub />
       <Footer />
     </>
   );
