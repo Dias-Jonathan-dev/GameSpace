@@ -35,8 +35,8 @@ const Categories = () => {
   if (error) return <p>{error}</p>;
 
   return (
-    <div>
-      <h1>Les catégories</h1>
+    <section className="category-section">
+      <h2>Les catégories</h2>
       <div className="horizontal-scroll">
         {genres.map((genre) => (
           <div key={genre.id} className="genre-item">
@@ -53,7 +53,7 @@ const Categories = () => {
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 

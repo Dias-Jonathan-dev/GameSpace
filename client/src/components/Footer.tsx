@@ -8,7 +8,9 @@ function Footer() {
         <img src={logoNoir} alt="Gamespace Logo" className="logo" />
       </Link>
       <p>Copyright 2025</p>
-      <Link to="/mentions-legales">Mentions légales</Link>
+      <Link to="/mentions-legales" className="mention-link">
+        Mentions légales
+      </Link>
     </footer>
   );
 }
