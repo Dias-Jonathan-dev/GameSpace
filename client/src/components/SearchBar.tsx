@@ -12,7 +12,7 @@ function SearchBar() {
     async function fetchGames() {
       try {
         const res = await fetch(
-          "https://api.rawg.io/api/games?key=c2c6c63b04bb4cd499f80941c741a62e",
+          "https://api.rawg.io/api/games?key=4bc0720168eb4f3a87dbdfbb61bc3461",
         );
         const data = await res.json();
         setGames(data.results);
