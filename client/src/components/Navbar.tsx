@@ -1,9 +1,9 @@
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router";
 import favicon from "../assets/images/favicon.svg";
 import SearchBar from "../components/SearchBar";
-import SearchResults from "./SearchResults";
 import type { Game } from "../services/UseFetchGames";
+import SearchResults from "./SearchResults";
 
 function NavBar() {
   const [games, setGames] = useState<Game[]>([]);

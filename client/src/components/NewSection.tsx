@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router";
 import UseFetchGames from "../services/UseFetchGames";
 import type { Game } from "../services/UseFetchGames";
-import { Link } from "react-router";
 
 function NewSection() {
   const [mainImage, setMainImage] = useState<Game | null>(null);

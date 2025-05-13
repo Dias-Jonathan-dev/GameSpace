@@ -1,6 +1,6 @@
 import type React from "react";
-import loupe_search from "../assets/images/loupe_search.svg";
 import type { Dispatch, SetStateAction } from "react";
+import loupe_search from "../assets/images/loupe_search.svg";
 
 interface SearchBarProps {
   setSearchTerm: Dispatch<SetStateAction<string>>;

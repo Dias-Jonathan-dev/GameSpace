@@ -1,5 +1,5 @@
-import GameCard from "./GameCard";
 import type { Game } from "../services/UseFetchGames";
+import GameCard from "./GameCard";
 
 interface SearchResultsProps {
   searchTerm: string;
