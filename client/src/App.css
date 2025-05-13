@@ -178,6 +178,21 @@ header {
   padding: 0 20px;
 }
 
+.games-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin: 3rem;
+}
+
+.search-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
 .searchbar input {
   background-color: transparent;
   border: none;

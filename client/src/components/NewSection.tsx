@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router";
 import UseFetchGames from "../services/UseFetchGames";
 import type { Game } from "../services/UseFetchGames";
 
@@ -9,7 +10,7 @@ function NewSection() {
     .sort(
       (a, b) => new Date(b.released).getTime() - new Date(a.released).getTime(),
     )
-    .slice(0, 9);
+    .slice(0, 6);
 
   useEffect(() => {
     if (sortedGames.length > 0) {
@@ -23,9 +24,9 @@ function NewSection() {
         <h2>Les nouveautés</h2>
         <h3>{mainImage?.name}</h3>
         <div className="news-galery">
-          <div className="main-image-news-galery">
+          <Link to={`/jeu/${mainImage?.id}`} className="main-image-news-galery">
             <img src={mainImage?.background_image} alt={mainImage?.name} />
-          </div>
+          </Link>
           <div className="thumbnails-news-galery">
             {sortedGames.map((game) => (
               <img
