@@ -2,9 +2,9 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import type { Game } from "../services/UseFetchGames";
 import ButtonsPlatform from "./ButtonsPlatform";
+import Footer from "./Footer";
 import GameCard from "./GameCard";
 import NavBar from "./Navbar";
-import Footer from "./Footer";
 
 function CategoryButtons() {
   const { platformId } = useParams<string>();
@@ -52,7 +52,7 @@ function CategoryButtons() {
           <p>Aucun jeu trouvé pour cette recherche</p>
         )}
       </div>
-     <Footer />
+      <Footer />
     </nav>
   );
 }
