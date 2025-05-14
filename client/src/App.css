@@ -132,6 +132,10 @@ body {
   border-radius: 999px;
 }
 
+.titre-platform {
+  text-align: center;
+}
+
 .platforms {
   display: flex;
   height: 20px;

@@ -41,7 +41,7 @@ function CategoryButtons() {
 
       <ButtonsPlatform />
 
-      <h2>voir les jeux</h2>
+      <h2 className="titre-platform">voir les jeux</h2>
       <div className="card-container">
         {filteredGames.length > 0 ? (
           games.map((game) => <GameCard key={game.id} game={game} />)
