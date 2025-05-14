@@ -6,7 +6,7 @@ function TopGames() {
 
   const topRatedGames = [...games]
     .sort((a, b) => b.rating - a.rating)
-    .slice(0, 9);
+    .slice(0, 20);
 
   return (
     <div className="topgames-container">

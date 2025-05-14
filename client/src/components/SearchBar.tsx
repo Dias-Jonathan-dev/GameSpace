@@ -1,31 +1,12 @@
 import type React from "react";
-import { useEffect, useState } from "react";
+import type { Dispatch, SetStateAction } from "react";
 import loupe_search from "../assets/images/loupe_search.svg";
-import type { Game } from "../services/UseFetchGames";
 
-function SearchBar() {
-  const [games, setGames] = useState<Game[]>([]);
-  const [searchTerm, setSearchTerm] = useState<string>("");
+interface SearchBarProps {
+  setSearchTerm: Dispatch<SetStateAction<string>>;
+}
 
-  useEffect(() => {
-    async function fetchGames() {
-      try {
-        const res = await fetch(
-          "https://api.rawg.io/api/games?key=4bc0720168eb4f3a87dbdfbb61bc3461",
-        );
-        const data = await res.json();
-        setGames(data.results);
-      } catch (error) {
-        console.error("failed to fetch games");
-      }
-    }
-    fetchGames();
-  }, []);
-  const filteredGames = games.filter((game) =>
-    searchTerm
-      ? game.name.toLowerCase().includes(searchTerm.toLowerCase())
-      : false,
-  );
+function SearchBar({ setSearchTerm }: SearchBarProps) {
   const handleSearchTerm = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value;
     if (value.length > 1) {
@@ -36,24 +17,16 @@ function SearchBar() {
   };
 
   return (
-    <>
-      <div className="searchbar">
-        <input
-          type="text"
-          placeholder="Recherchez un jeu"
-          name="SearchBar"
-          id="SearchBar"
-          onChange={handleSearchTerm}
-        />
-
-        <img className="loupe" src={loupe_search} alt="loupe" />
-      </div>
-      <div className="games-cards">
-        {filteredGames.map((game) => (
-          <div key={game.id} />
-        ))}
-      </div>
-    </>
+    <div className="searchbar">
+      <input
+        type="text"
+        placeholder="Recherchez un jeu"
+        name="SearchBar"
+        id="SearchBar"
+        onChange={handleSearchTerm}
+      />
+      <img className="loupe" src={loupe_search} alt="loupe" />
+    </div>
   );
 }
 
