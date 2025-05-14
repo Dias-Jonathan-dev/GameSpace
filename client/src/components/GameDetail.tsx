@@ -3,7 +3,7 @@ import { useParams } from "react-router";
 import UseFetchGames from "../services/UseFetchGames";
 
 import NintendoIcon from "../assets/images/platforms/NintendoIcon.svg";
-import PcIcon from "../assets/images/platforms/PcIcon2.svg";
+import PcIcon from "../assets/images/platforms/PcIcon.svg";
 import PsIcon from "../assets/images/platforms/PsIcon.svg";
 import XboxIcon from "../assets/images/platforms/XboxIcon.svg";
 import Footer from "./Footer";

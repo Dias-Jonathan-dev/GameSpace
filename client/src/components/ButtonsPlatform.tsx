@@ -1,6 +1,6 @@
 import { Link } from "react-router";
 import Nintendo from "../assets/images/platforms/NintendoIcon.svg";
-import PcIcon from "../assets/images/platforms/PcIcon2.svg";
+import PcIcon from "../assets/images/platforms/PcIcon.svg";
 import PlaystationIcon from "../assets/images/platforms/PsIcon.svg";
 import xboxIcon from "../assets/images/platforms/XboxIcon.svg";
 
