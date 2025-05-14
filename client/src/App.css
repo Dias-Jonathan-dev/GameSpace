@@ -220,6 +220,13 @@ body {
   padding: 20px;
 }
 
+.card-container {
+  gap: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
 .card-body {
   width: 250px;
   height: 350px;
@@ -264,16 +271,22 @@ body {
 }
 
 .card-link {
+  display: flex;
+  justify-content: center;
   text-decoration: none;
 }
 
 .buttons-platform {
   display: flex;
   justify-content: space-between;
+  margin: 0 auto;
+  background-color: var(--bleu-clair);
+  width: 66vw;
   align-items: center;
   padding: 20px;
   border-radius: 999px;
   margin-bottom: 20px;
+  gap: 20px;
 }
 
 .buttons-platform img:hover {
@@ -295,6 +308,7 @@ body {
   height: 3rem;
   border-radius: 999px;
 }
+
 .button-xbox {
   background-color: green;
   width: 3rem;
@@ -418,11 +432,6 @@ h1 {
   justify-content: center;
   gap: 20px;
   flex-wrap: wrap;
-}
-
-div {
-  flex-direction: row;
-  gap: 10px;
 }
 
 .card-body:hover {

@@ -12,10 +12,10 @@ interface buttonsType {
 }
 
 interface PlatformIdsType {
-  pc: number;
-  xbox: number;
-  playstation: number;
-  nintendo: number;
+  pc: number[];
+  xbox: number[];
+  playstation: number[];
+  nintendo: number[];
 }
 
 function ButtonsPlatform() {
@@ -27,16 +27,16 @@ function ButtonsPlatform() {
   };
 
   const platformIds: PlatformIdsType = {
-    pc: 4,
-    xbox: 3,
-    playstation: 187,
-    nintendo: 7,
+    pc: [4, 40849, 5, 45635, 40685, 31],
+    xbox: [3, 14, 1, 186],
+    playstation: [2, 187, 18, 16],
+    nintendo: [7],
   };
 
   return (
     <div className="buttons-platform">
       <div className="button-playstation">
-        <Link to={`/categories/${platformIds.playstation}`}>
+        <Link to={`/categories/${platformIds.playstation.join(",")}`}>
           <img src={platforms.playstation} alt="playstation" />
         </Link>
       </div>
