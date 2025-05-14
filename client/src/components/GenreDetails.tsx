@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { useParams } from "react-router";
 import UseFetchGames from "../services/UseFetchGames";
 import GameCard from "./GameCard";
+import NavBar from "./Navbar";
 
 type Genre = {
   id: number;
@@ -42,19 +43,14 @@ const GenreDetails = () => {
   if (!genre) return <p>Aucun genre trouvé.</p>;
 
   return (
-    <div>
+    <>
       <div>
+        <NavBar />
         <div className="gamesDetails">
-          <img src={genre.image_background} alt={genre.name} />
-
+          <div className="Detail-img">
+            <img src={genre.image_background} alt={genre.name} />
+          </div>
           <h1>{genre.name}</h1>
-          <p>
-            {genre.description ||
-              "Aucune description disponible pour ce genre."}
-          </p>
-        </div>
-        <div className="Suggestion">
-          <h2>Jeux similaires</h2>
           <div className="games-container">
             {games?.map((game) => (
               <GameCard game={game} key={game.id} />
@@ -62,7 +58,7 @@ const GenreDetails = () => {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 
