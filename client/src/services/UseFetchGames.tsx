@@ -21,11 +21,27 @@ function UseFetchGames() {
   useEffect(() => {
     const fetchGames = async () => {
       try {
+        const cached = localStorage.getItem("gamesData");
+        const cacheTime = localStorage.getItem("gamesDataTimestamp");
+
+        if (
+          cached &&
+          cacheTime &&
+          Date.now() - Number.parseInt(cacheTime) < 6 * 60 * 60 * 1000
+        ) {
+          const parsed = JSON.parse(cached);
+          setGames(parsed);
+          return;
+        }
+
         const response = await fetch(
           "https://api.rawg.io/api/games?key=4bc0720168eb4f3a87dbdfbb61bc3461",
         );
         const data = await response.json();
+
         setGames(data.results);
+        localStorage.setItem("gamesData", JSON.stringify(data.results));
+        localStorage.setItem("gamesDataTimestamp", Date.now().toString());
       } catch (error) {
         console.error("Erreur lors du fetch :", error);
       }

@@ -1,15 +1,25 @@
 import { Link } from "react-router";
-import assasin from "../assets/images/assasin.png";
+import assassin from "../assets/images/assassin.png";
+import Footer from "./Footer";
+import NavBar from "./Navbar";
 
 function Page404() {
   return (
-    <div className="Page404">
-      <h2> ERROR </h2>
-      <h1> 404 </h1>
-      <p>La page que tu recherche n'existe pas</p>
-      <Link to="/Page404">Page404</Link>
-      <img src={assasin} alt="Page404" className="img-assasin" />
-    </div>
+    <>
+      <NavBar />
+      <div className="Page404">
+        <div className="Error-txt">
+          <h1>ERROR 404</h1>
+          <p>La page que vous cherchez n'existe pas</p>
+        </div>
+        <img src={assassin} alt="" />
+        <Link to="/" className="back-home-link">
+          Home
+        </Link>
+      </div>
+
+      <Footer />
+    </>
   );
 }
 

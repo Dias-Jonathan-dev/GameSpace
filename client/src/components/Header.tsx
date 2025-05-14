@@ -5,12 +5,11 @@ function Header() {
     <header>
       <img src={LogoBlanc} alt="logo-gamespace" className="header-img" />
       <div className="header-text">
-        <h1>GAMESPACE</h1>
         <p>
-          Bienvenue sur GameSpace, ton nouveau terrain de jeu numérique !
-          Découvre les dernières sorties, explore tous les styles de jeux, et
-          trouve ta prochaine obsession vidéoludique parmi des centaines de
-          titres triés sur le volet !
+          Bienvenue sur <span className="text-orange">GameSpace</span>, ton
+          nouveau terrain de jeu numérique ! Découvre les dernières sorties,
+          explore tous les styles de jeux, et trouve ta prochaine obsession
+          vidéoludique parmi des centaines de titres triés sur le volet !
         </p>
       </div>
     </header>

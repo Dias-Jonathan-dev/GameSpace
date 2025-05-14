@@ -1,10 +1,12 @@
 import "../src/services/Reset.css";
 import "./App.css";
 import ButtonsPlaform from "./components/ButtonsPlatform";
+import Categories from "./components/Category";
 import Footer from "./components/Footer";
-import GameCardsArea from "./components/GameCardsArea";
 import Header from "./components/Header";
 import NavBar from "./components/Navbar";
+import NewSection from "./components/NewSection";
+import Pub from "./components/Pub";
 import TopGames from "./components/TopGames";
 
 function App() {
@@ -13,9 +15,10 @@ function App() {
       <NavBar />
       <Header />
       <ButtonsPlaform />
+      <NewSection />
+      <Categories />
       <TopGames />
-      <h2>Nos jeux</h2>
-      <GameCardsArea />
+      <Pub />
       <Footer />
     </>
   );
