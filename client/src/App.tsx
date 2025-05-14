@@ -4,6 +4,7 @@ import ButtonsPlaform from "./components/ButtonsPlatform";
 import Categories from "./components/Category";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
+import MostPopular from "./components/MostPopular";
 import NavBar from "./components/Navbar";
 import NewSection from "./components/NewSection";
 import Pub from "./components/Pub";
@@ -19,6 +20,7 @@ function App() {
       <Categories />
       <TopGames />
       <Pub />
+      <MostPopular />
       <Footer />
     </>
   );
