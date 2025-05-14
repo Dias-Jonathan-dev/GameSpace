@@ -28,7 +28,7 @@ function ButtonsPlatform() {
 
   const platformIds: PlatformIdsType = {
     pc: [1, 4, 6, 40849, 5, 31, 40847, 21, 8],
-    xbox: [14,],
+    xbox: [14],
     playstation: [3],
     nintendo: [7],
   };
