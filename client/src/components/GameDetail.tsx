@@ -8,6 +8,7 @@ import PsIcon from "../assets/images/platforms/PsIcon.svg";
 import XboxIcon from "../assets/images/platforms/XboxIcon.svg";
 import Footer from "./Footer";
 import NavBar from "./Navbar";
+import ScrollToTop from "./ScrollToTop";
 import Suggestion from "./Suggestion";
 
 function GameDetail() {
@@ -143,6 +144,7 @@ function GameDetail() {
           <Suggestion />
         </section>
       </div>
+      <ScrollToTop />
       <Footer />
     </>
   );
