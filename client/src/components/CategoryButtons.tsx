@@ -14,7 +14,7 @@ function CategoryButtons() {
     const fetchData = async () => {
       try {
         const response = await fetch(
-          `https://api.rawg.io/api/games?key=4bc0720168eb4f3a87dbdfbb61bc3461&parent_platforms=${platformId}`,
+          `https://api.rawg.io/api/games?key=95d7295d2a97423891de9826bea252cd&parent_platforms=${platformId}`,
         );
 
         const data = await response.json();
