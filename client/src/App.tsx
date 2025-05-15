@@ -1,5 +1,6 @@
 import "../src/services/Reset.css";
 import "./App.css";
+import ButtonsPlaform from "./components/ButtonsPlatform";
 import Categories from "./components/Category";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
@@ -14,6 +15,7 @@ function App() {
     <>
       <NavBar />
       <Header />
+      <ButtonsPlaform />
       <NewSection />
       <Categories />
       <TopGames />
