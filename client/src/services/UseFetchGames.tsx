@@ -39,7 +39,7 @@ function UseFetchGames() {
         }
 
         let allGames: Game[] = [];
-        for (let page = 1; page <= 20; page++) {
+        for (let page = 1; page <= 30; page++) {
           const response = await fetch(
             `https://api.rawg.io/api/games?key=4bc0720168eb4f3a87dbdfbb61bc3461&page=${page}&page_size=20`,
           );
