@@ -23,7 +23,7 @@ const GenreDetails = () => {
     const fetchGenre = async () => {
       try {
         const response = await fetch(
-          `https://api.rawg.io/api/genres/${id}?key=4bc0720168eb4f3a87dbdfbb61bc3461`,
+          `https://api.rawg.io/api/genres/${id}?key=95d7295d2a97423891de9826bea252cd`,
         );
         if (!response.ok) throw new Error("Erreur lors du chargement");
         const data = await response.json();
@@ -52,9 +52,11 @@ const GenreDetails = () => {
           </div>
           <h1>{genre.name}</h1>
           <div className="games-container">
-            {games?.map((game) => (
-              <GameCard game={game} key={game.id} />
-            ))}
+            {games
+              ?.filter((game) => game.genres.some((g) => g.name === genre.name))
+              .map((game) => (
+                <GameCard game={game} key={game.id} />
+              ))}
           </div>
         </div>
       </div>
