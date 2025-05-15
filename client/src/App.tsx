@@ -8,6 +8,7 @@ import NavBar from "./components/Navbar";
 import NewSection from "./components/NewSection";
 import Pub from "./components/Pub";
 import TopGames from "./components/TopGames";
+import HorrorSection from "./components/HorrorSection";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
       <TopGames />
       <Pub />
       <MostPopular />
+      <HorrorSection />
       <Footer />
     </>
   );
