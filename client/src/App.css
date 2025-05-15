@@ -397,6 +397,10 @@ footer a {
   margin-bottom: 2.5rem;
 }
 
+.genre-item a {
+  text-decoration: none;
+}
+
 .genre-image-wrapper {
   display: flex;
   flex-direction: column;
@@ -738,10 +742,15 @@ footer a {
   padding: 1rem;
 }
 
+.category-buttons h2 {
+  text-align: center;
+}
+
 .gamesDetails h1 {
   text-align: center;
   color: var(--orange);
   font-size: 3rem;
+  margin-bottom: 5vh;
 }
 
 .gamesDetails p {
@@ -848,10 +857,6 @@ footer a {
   .genre-item {
     width: 250px;
     opacity: 0.8;
-  }
-
-  .genre-item a {
-    text-decoration: none;
   }
 
   .genre-item:hover {
@@ -975,5 +980,20 @@ footer a {
   .horror-section {
     background-color: #6d7188;
     background-blend-mode: multiply;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .topgames-container {
+    max-width: 70vw;
+    margin: 0 auto;
+  }
+
+  .pub-text h2 {
+    font-size: 4rem;
+  }
+
+  .pub-text h3 {
+    font-size: 2rem;
   }
 }

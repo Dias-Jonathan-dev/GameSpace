@@ -42,6 +42,8 @@ function Pub() {
       className="pub"
       style={{
         backgroundImage: `url(${game?.background_image})`,
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
       }}
     >

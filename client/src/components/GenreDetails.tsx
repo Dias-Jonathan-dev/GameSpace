@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router";
 import UseFetchGames from "../services/UseFetchGames";
+import Footer from "./Footer";
 import GameCard from "./GameCard";
 import NavBar from "./Navbar";
+import ScrollToTop from "./ScrollToTop";
 
 type Genre = {
   id: number;
@@ -59,6 +61,8 @@ const GenreDetails = () => {
               ))}
           </div>
         </div>
+        <ScrollToTop />
+        <Footer />
       </div>
     </>
   );
