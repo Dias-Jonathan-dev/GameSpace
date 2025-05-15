@@ -894,6 +894,28 @@ footer a {
     z-index: 2; /* Assure que le texte soit au-dessus de l'overlay */
   }
 
+  .horror-section {
+    position: relative;
+    height: 80vh;
+    background-blend-mode: multiply;
+    overflow: hidden;
+    cursor: pointer;
+  }
+
+  .torch-overlay {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    pointer-events: none;
+    transition: mask-image 0.2s ease;
+    z-index: 1;
+  }
+
+  .horror-section .pub-text {
+    position: relative;
+    z-index: 2; /* Assure que le texte soit au-dessus de l'overlay */
+  }
+
   .buttons-platform {
     display: flex;
     justify-content: space-evenly;
