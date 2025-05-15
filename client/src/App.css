@@ -127,7 +127,7 @@ body {
   justify-content: center;
   width: 90vw;
   height: 80px;
-  margin: auto;
+  margin: 6vh auto;
   background-color: var(--bleu-clair);
   align-items: center;
   border-radius: 999px;
@@ -679,7 +679,7 @@ footer a {
   flex-direction: column;
   color: white;
   margin: 10vh 0;
-  height: 40vh;
+  height: 60vh;
   clip-path: polygon(0% 5%, 100% 0, 100% 100%, 0 95%);
 }
 
@@ -690,6 +690,10 @@ footer a {
   flex-direction: column;
   justify-content: center;
   gap: 20px;
+}
+
+.pub-text h2 {
+  font-size: 2rem;
 }
 
 .pub-button {
@@ -723,6 +727,7 @@ footer a {
 
 .Detail-img {
   height: 30vh;
+  opacity: 0.3;
 }
 
 .games-container {
@@ -922,7 +927,6 @@ footer a {
     justify-content: space-evenly;
     width: 50rem;
     height: 100px;
-    margin: auto;
     background-color: var(--bleu-clair);
     align-items: center;
     border-radius: 999px;

@@ -5,6 +5,7 @@ import ButtonsPlatform from "./ButtonsPlatform";
 import Footer from "./Footer";
 import GameCard from "./GameCard";
 import NavBar from "./Navbar";
+import ScrollToTop from "./ScrollToTop";
 
 function CategoryButtons() {
   const { platformId } = useParams<string>();
@@ -48,12 +49,7 @@ function CategoryButtons() {
   return (
     <nav>
       <NavBar />
-      <h1>Category</h1>
-
-      <p>Platform ID: {platformId}</p>
-
       <ButtonsPlatform />
-
       <h2 className="titre-platform">voir les jeux</h2>
       <div className="card-container">
         {filteredGames.length > 0 ? (
@@ -62,6 +58,7 @@ function CategoryButtons() {
           <p>Aucun jeu trouvé pour cette recherche</p>
         )}
       </div>
+      <ScrollToTop />
       <Footer />
     </nav>
   );

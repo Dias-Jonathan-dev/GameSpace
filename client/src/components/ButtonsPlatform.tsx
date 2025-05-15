@@ -39,21 +39,18 @@ function ButtonsPlatform() {
         <Link to={`/categories/${platformIds.playstation.join(",")}`}>
           <img src={platforms.playstation} alt="playstation" />
         </Link>
-        <h3>playstation</h3>
       </div>
 
       <div className="button-xbox">
         <Link to={`/categories/${platformIds.xbox}`}>
           <img src={platforms.xbox} alt="xbox" />
         </Link>
-        <h3>xbox</h3>
       </div>
 
       <div className="button-pc">
         <Link to={`/categories/${platformIds.pc}`}>
           <img src={platforms.pc} alt="pc" />
         </Link>
-        <h3>pc</h3>
       </div>
 
       <div className="button-nintendo">
