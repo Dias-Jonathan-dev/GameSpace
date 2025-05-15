@@ -126,11 +126,17 @@ body {
   display: flex;
   justify-content: space-evenly;
   width: 80vw;
-  height: 80px;
+  height: 70px;
   margin: auto;
   background-color: var(--bleu-clair);
   align-items: center;
   border-radius: 999px;
+  text-align: center;
+
+  h3 {
+    font-size: 8px;
+    color: lightgoldenrodyellow;
+  }
 }
 
 .buttons-platform img:hover {
@@ -152,16 +158,14 @@ body {
 
 .button-playstation {
   flex-direction: row;
-  background-color: black;
   border-radius: 999px;
 
   img {
-    width: 3rem;
+    width: 2rem;
   }
 }
 
 .button-xbox {
-  background-color: green;
   border-radius: 999px;
 
   img {
@@ -173,13 +177,12 @@ body {
   border-radius: 999px;
 
   img {
-    width: 4rem;
+    width: 3.5rem;
   }
 }
 
 .button-nintendo img {
   width: 7rem;
-  background-color: blue;
   border-radius: 999px;
 }
 
@@ -862,18 +865,17 @@ footer a {
 
   .button-playstation {
     flex-direction: row;
-    background-color: black;
-    border-radius: 999px;
-
+    text-align: center;
     img {
       width: 4rem;
+    }
+    h3 {
+      font-size: 15px;
+      color: white;
     }
   }
 
   .button-xbox {
-    background-color: green;
-    border-radius: 999px;
-
     img {
       width: 4rem;
     }

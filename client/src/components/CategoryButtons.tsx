@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams } from "react-router";
 import type { Game } from "../services/UseFetchGames";
 import ButtonsPlatform from "./ButtonsPlatform";
 import Footer from "./Footer";
