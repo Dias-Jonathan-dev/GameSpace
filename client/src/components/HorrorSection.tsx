@@ -6,9 +6,12 @@ import PsIcon from "../assets/images/platforms/PsIcon.svg";
 import XboxIcon from "../assets/images/platforms/XboxIcon.svg";
 import type { Game } from "../services/UseFetchGames";
 
-function Pub() {
+function HorrorSection() {
   const [game, setGame] = useState<Game>();
-  const gameId = 58175;
+  const gameId = 480;
+
+  const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
+  const [isHovering, setIsHovering] = useState(false);
 
   const platformIcons: PlatformIconsType = {
     PC: PcIcon,
@@ -33,18 +36,39 @@ function Pub() {
         console.error("Erreur lors du chargement du jeu");
       }
     };
-
     fetchGame();
   }, []);
 
+  const handleMouseMove = (e: React.MouseEvent) => {
+    const rect = e.currentTarget.getBoundingClientRect();
+    setMousePos({
+      x: e.clientX - rect.left,
+      y: e.clientY - rect.top,
+    });
+  };
+
   return (
     <section
-      className="pub"
+      className="horror-section"
       style={{
         backgroundImage: `url(${game?.background_image})`,
-        backgroundSize: "cover",
+        backgroundPosition: "center",
       }}
+      onMouseMove={handleMouseMove} // AJOUT : Gestion du mouvement de la souris
+      onMouseEnter={() => setIsHovering(true)} // AJOUT : Activation du survol
+      onMouseLeave={() => setIsHovering(false)} // AJOUT : Désactivation du survol
     >
+      <div
+        className="torch-overlay"
+        style={
+          isHovering
+            ? {
+                WebkitMaskImage: `radial-gradient(circle 200px at ${mousePos.x}px ${mousePos.y}px, transparent 0%, black 80%)`, // Modification dynamique de l'effet
+                maskImage: `radial-gradient(circle 200px at ${mousePos.x}px ${mousePos.y}px, transparent 0%, black 80%)`, // Modification dynamique de l'effet
+              }
+            : {}
+        }
+      />
       <div className="pub-text">
         <h2>{game?.name}</h2>
         <h3>{game?.genres[0].name}</h3>
@@ -70,4 +94,4 @@ function Pub() {
   );
 }
 
-export default Pub;
+export default HorrorSection;
