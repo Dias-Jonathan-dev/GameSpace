@@ -41,7 +41,7 @@ function UseFetchGames() {
         let allGames: Game[] = [];
         for (let page = 1; page <= 30; page++) {
           const response = await fetch(
-            `https://api.rawg.io/api/games?key=95d7295d2a97423891de9826bea252cd&page=${page}&page_size=20`,
+            `https://api.rawg.io/api/games?key=95d7295d2a97423891de9826bea252cd&page=${page}`,
           );
           const data = await response.json();
 
@@ -57,13 +57,6 @@ function UseFetchGames() {
             game.genres.length > 0
           );
         });
-        filteredGames.map((elem) =>
-          console.log(
-            elem.esrb_rating == null
-              ? `${elem.name} esrb_rating is null`
-              : "trql frr",
-          ),
-        );
 
         localStorage.setItem(cacheKey, JSON.stringify(filteredGames));
         localStorage.setItem(cacheTimeKey, Date.now().toString());

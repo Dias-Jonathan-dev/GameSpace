@@ -8,7 +8,7 @@ import type { Game } from "../services/UseFetchGames";
 
 function HorrorSection() {
   const [game, setGame] = useState<Game>();
-  const gameId = 480;
+  const gameId = 9966;
 
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
   const [isHovering, setIsHovering] = useState(false);
@@ -53,6 +53,8 @@ function HorrorSection() {
       style={{
         backgroundImage: `url(${game?.background_image})`,
         backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "cover",
       }}
       onMouseMove={handleMouseMove} // AJOUT : Gestion du mouvement de la souris
       onMouseEnter={() => setIsHovering(true)} // AJOUT : Activation du survol
@@ -63,8 +65,8 @@ function HorrorSection() {
         style={
           isHovering
             ? {
-                WebkitMaskImage: `radial-gradient(circle 200px at ${mousePos.x}px ${mousePos.y}px, transparent 0%, black 80%)`, // Modification dynamique de l'effet
-                maskImage: `radial-gradient(circle 200px at ${mousePos.x}px ${mousePos.y}px, transparent 0%, black 80%)`, // Modification dynamique de l'effet
+                WebkitMaskImage: `radial-gradient(circle 300px at ${mousePos.x}px ${mousePos.y}px, transparent 0%, black 80%)`,
+                maskImage: `radial-gradient(circle 300px at ${mousePos.x}px ${mousePos.y}px, transparent 0%, black 80%)`,
               }
             : {}
         }

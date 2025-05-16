@@ -9,6 +9,7 @@ import MostPopular from "./components/MostPopular";
 import NavBar from "./components/Navbar";
 import NewSection from "./components/NewSection";
 import Pub from "./components/Pub";
+import ScrollToTop from "./components/ScrollToTop";
 import TopGames from "./components/TopGames";
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
       <Pub />
       <MostPopular />
       <HorrorSection />
+      <ScrollToTop />
       <Footer />
     </>
   );
