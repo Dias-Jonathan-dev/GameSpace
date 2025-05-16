@@ -45,22 +45,30 @@ function UseFetchGames() {
           );
           const data = await response.json();
 
-          const filteredGames = data.results.filter((game: Game) => {
-            return (
-              game.esrb_rating !== null &&
-              game.esrb_rating?.id !== 5 &&
-              game.genres &&
-              game.genres.length > 0
-            );
-          });
-
-          allGames = [...allGames, ...filteredGames];
+          allGames = [...allGames, ...data.results];
         }
 
-        localStorage.setItem(cacheKey, JSON.stringify(allGames));
+        const filteredGames = allGames.filter((game) => {
+          return (
+            game.esrb_rating !== undefined &&
+            game.esrb_rating !== null &&
+            game.esrb_rating.id !== 5 &&
+            Array.isArray(game.genres) &&
+            game.genres.length > 0
+          );
+        });
+        filteredGames.map((elem) =>
+          console.log(
+            elem.esrb_rating == null
+              ? `${elem.name} esrb_rating is null`
+              : "trql frr",
+          ),
+        );
+
+        localStorage.setItem(cacheKey, JSON.stringify(filteredGames));
         localStorage.setItem(cacheTimeKey, Date.now().toString());
 
-        setGames(allGames);
+        setGames(filteredGames);
         console.log(
           "Données chargées depuis l'API et stockées dans le local storage",
         );

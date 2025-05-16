@@ -16,10 +16,20 @@ function CategoryButtons() {
         const response = await fetch(
           `https://api.rawg.io/api/games?key=95d7295d2a97423891de9826bea252cd&parent_platforms=${platformId}`,
         );
-
         const data = await response.json();
-        setGames(data.results || []);
-        console.log(data.results);
+
+        const filteredResults = data.results.filter((game: Game) => {
+          return (
+            game.esrb_rating !== undefined &&
+            game.esrb_rating !== null &&
+            game.esrb_rating.id !== 5 &&
+            Array.isArray(game.genres) &&
+            game.genres.length > 0
+          );
+        });
+
+        setGames(filteredResults);
+        console.log("Jeux filtrés :", filteredResults);
       } catch (error) {
         console.error(error);
       }
