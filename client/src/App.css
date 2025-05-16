@@ -28,6 +28,10 @@ body {
   background: linear-gradient(to right, #040718, #161e41, #040718);
 }
 
+a {
+  text-decoration: none;
+}
+
 /* --- NAVIGATION --- */
 
 .fav-nav {
@@ -375,8 +379,9 @@ footer a {
 /* --------- section categorie de jeux -------- */
 .horizontal-scroll {
   display: flex;
+  flex-direction: column;
+  align-items: center;
   overflow-x: auto;
-  gap: 1em;
   padding: 1em;
   scroll-snap-type: x mandatory;
 }
@@ -395,6 +400,7 @@ footer a {
   background: var(--bleu-clair);
   color: var(--orange);
   margin-bottom: 2.5rem;
+  text-decoration: none;
 }
 
 .genre-item a {
@@ -430,6 +436,7 @@ footer a {
   font-size: 1.2rem;
   width: 100%;
   color: white;
+  text-decoration: none;
 }
 
 /*--------------  section page Mention Legal -------------*/
@@ -874,7 +881,7 @@ footer a {
   }
 
   .searchbar {
-    width: 40vw;
+    width: 20vw;
   }
 
   .pub {
@@ -902,7 +909,8 @@ footer a {
 
   .horror-section .pub-text {
     position: relative;
-    z-index: 2; /* Assure que le texte soit au-dessus de l'overlay */
+    z-index: 2;
+    /* Assure que le texte soit au-dessus de l'overlay */
   }
 
   .horror-section {
@@ -924,7 +932,8 @@ footer a {
 
   .horror-section .pub-text {
     position: relative;
-    z-index: 2; /* Assure que le texte soit au-dessus de l'overlay */
+    z-index: 2;
+    /* Assure que le texte soit au-dessus de l'overlay */
   }
 
   .buttons-platform {
@@ -945,6 +954,7 @@ footer a {
   .button-playstation {
     flex-direction: row;
     text-align: center;
+
     img {
       width: 4rem;
     }
@@ -953,6 +963,7 @@ footer a {
   .button-xbox {
     flex-direction: row;
     text-align: center;
+
     img {
       width: 4rem;
     }
@@ -971,6 +982,7 @@ footer a {
       font-size: 15px;
     }
   }
+
   .button-nintendo img {
     width: 9rem;
   }

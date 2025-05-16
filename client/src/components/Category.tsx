@@ -47,7 +47,7 @@ const Categories = () => {
                   alt={genre.name}
                   className="genre-image"
                 />
-                <div className="genre-name">{genre.name}</div>
+                <h3 className="genre-name">{genre.name}</h3>
               </div>
             </Link>
           </div>
