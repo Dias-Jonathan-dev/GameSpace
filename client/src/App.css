@@ -131,7 +131,7 @@ a {
   justify-content: center;
   width: 90vw;
   height: 80px;
-  margin: auto;
+  margin: 6vh auto;
   background-color: var(--bleu-clair);
   align-items: center;
   border-radius: 999px;
@@ -400,6 +400,10 @@ footer a {
   background: var(--bleu-clair);
   color: var(--orange);
   margin-bottom: 2.5rem;
+  text-decoration: none;
+}
+
+.genre-item a {
   text-decoration: none;
 }
 
@@ -686,7 +690,7 @@ footer a {
   flex-direction: column;
   color: white;
   margin: 10vh 0;
-  height: 40vh;
+  height: 60vh;
   clip-path: polygon(0% 5%, 100% 0, 100% 100%, 0 95%);
 }
 
@@ -697,6 +701,10 @@ footer a {
   flex-direction: column;
   justify-content: center;
   gap: 20px;
+}
+
+.pub-text h2 {
+  font-size: 2rem;
 }
 
 .pub-button {
@@ -730,6 +738,7 @@ footer a {
 
 .Detail-img {
   height: 30vh;
+  opacity: 0.3;
 }
 
 .games-container {
@@ -740,10 +749,15 @@ footer a {
   padding: 1rem;
 }
 
+.category-buttons h2 {
+  text-align: center;
+}
+
 .gamesDetails h1 {
   text-align: center;
   color: var(--orange);
   font-size: 3rem;
+  margin-bottom: 5vh;
 }
 
 .gamesDetails p {
@@ -852,10 +866,6 @@ footer a {
     opacity: 0.8;
   }
 
-  .genre-item a {
-    text-decoration: none;
-  }
-
   .genre-item:hover {
     transform: scale(1.05);
     box-shadow: 0 10px 25px rgb(0, 0, 0, 0, 12);
@@ -931,7 +941,6 @@ footer a {
     justify-content: space-evenly;
     width: 50rem;
     height: 100px;
-    margin: auto;
     background-color: var(--bleu-clair);
     align-items: center;
     border-radius: 999px;
@@ -983,5 +992,20 @@ footer a {
   .horror-section {
     background-color: #6d7188;
     background-blend-mode: multiply;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .topgames-container {
+    max-width: 70vw;
+    margin: 0 auto;
+  }
+
+  .pub-text h2 {
+    font-size: 4rem;
+  }
+
+  .pub-text h3 {
+    font-size: 2rem;
   }
 }

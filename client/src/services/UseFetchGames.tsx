@@ -41,26 +41,27 @@ function UseFetchGames() {
         let allGames: Game[] = [];
         for (let page = 1; page <= 30; page++) {
           const response = await fetch(
-            `https://api.rawg.io/api/games?key=95d7295d2a97423891de9826bea252cd&page=${page}&page_size=20`,
+            `https://api.rawg.io/api/games?key=95d7295d2a97423891de9826bea252cd&page=${page}`,
           );
           const data = await response.json();
 
-          const filteredGames = data.results.filter((game: Game) => {
-            return (
-              game.esrb_rating !== null &&
-              game.esrb_rating?.id !== 5 &&
-              game.genres &&
-              game.genres.length > 0
-            );
-          });
-
-          allGames = [...allGames, ...filteredGames];
+          allGames = [...allGames, ...data.results];
         }
 
-        localStorage.setItem(cacheKey, JSON.stringify(allGames));
+        const filteredGames = allGames.filter((game) => {
+          return (
+            game.esrb_rating !== undefined &&
+            game.esrb_rating !== null &&
+            game.esrb_rating.id !== 5 &&
+            Array.isArray(game.genres) &&
+            game.genres.length > 0
+          );
+        });
+
+        localStorage.setItem(cacheKey, JSON.stringify(filteredGames));
         localStorage.setItem(cacheTimeKey, Date.now().toString());
 
-        setGames(allGames);
+        setGames(filteredGames);
         console.log(
           "Données chargées depuis l'API et stockées dans le local storage",
         );

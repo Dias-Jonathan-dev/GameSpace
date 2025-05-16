@@ -1,59 +1,63 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router";
-import type { Game } from "../services/UseFetchGames";
+import UseFetchGames from "../services/UseFetchGames";
 import ButtonsPlatform from "./ButtonsPlatform";
 import Footer from "./Footer";
 import GameCard from "./GameCard";
 import NavBar from "./Navbar";
+import ScrollToTop from "./ScrollToTop";
+
+const platformNames: Record<string, string> = {
+  "1": "PC",
+  "2": "PlayStation",
+  "3": "Xbox",
+  "7": "Nintendo",
+};
 
 function CategoryButtons() {
-  const { platformId } = useParams<string>();
-  const [games, setGames] = useState<Game[] | []>([]);
+  const { platformId } = useParams<{ platformId: string }>();
+  const [platformName, setPlatformName] = useState<string>("");
+
+  const games = UseFetchGames();
 
   useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await fetch(
-          `https://api.rawg.io/api/games?key=95d7295d2a97423891de9826bea252cd&parent_platforms=${platformId}`,
-        );
+    if (!platformId) {
+      setPlatformName("");
+      return;
+    }
 
-        const data = await response.json();
-        setGames(data.results || []);
-        console.log(data.results);
-      } catch (error) {
-        console.error(error);
-      }
-    };
-
-    fetchData();
+    const firstId = platformId.split(",")[0];
+    setPlatformName(platformNames[firstId] || "Plateforme inconnue");
   }, [platformId]);
 
-  const filteredGames = games.filter((game) => {
-    const platforms =
-      game.parent_platforms?.map((pf) => Number(pf.platform.id)) || [];
-    return platforms.map((id) => platformId?.includes(id.toString()));
-  });
-  console.log(filteredGames);
+  if (!games.length) return <p>Chargement des jeux...</p>;
+
+  // tableau des ids plateformes depuis l'url
+  const platformIds = platformId ? platformId.split(",") : [];
+
+  const filteredGames = games.filter((game) =>
+    game.parent_platforms?.some((pf) =>
+      platformIds.includes(pf.platform.id.toString()),
+    ),
+  );
 
   return (
-    <nav>
+    <>
       <NavBar />
-      <h1>Category</h1>
-
-      <p>Platform ID: {platformId}</p>
-
       <ButtonsPlatform />
-
-      <h2 className="titre-platform">voir les jeux</h2>
-      <div className="card-container">
-        {filteredGames.length > 0 ? (
-          games.map((game) => <GameCard key={game.id} game={game} />)
-        ) : (
-          <p>Aucun jeu trouvé pour cette recherche</p>
-        )}
+      <div className="category-buttons">
+        <h2>{platformName}</h2>
+        <div className="games-container">
+          {filteredGames.length > 0 ? (
+            filteredGames.map((game) => <GameCard key={game.id} game={game} />)
+          ) : (
+            <p>Aucun jeu trouvé pour cette plateforme.</p>
+          )}
+        </div>
       </div>
+      <ScrollToTop />
       <Footer />
-    </nav>
+    </>
   );
 }
 
