@@ -689,7 +689,7 @@ footer a {
 
 /* SECTION PUB */
 
-.pub {
+.promo {
   display: flex;
   flex-direction: column;
   color: white;
@@ -698,7 +698,7 @@ footer a {
   clip-path: polygon(0% 5%, 100% 0, 100% 100%, 0 95%);
 }
 
-.pub-text {
+.promo-text {
   padding: 2vw;
   height: 100%;
   display: flex;
@@ -707,11 +707,11 @@ footer a {
   gap: 20px;
 }
 
-.pub-text h2 {
+.promo-text h2 {
   font-size: 2rem;
 }
 
-.pub-button {
+.promo-button {
   all: unset;
   font-family: var(--font-text);
   background-color: var(--orange);
@@ -721,12 +721,12 @@ footer a {
   width: fit-content;
 }
 
-.pub-button:hover {
+.promo-button:hover {
   background-color: var(--bleu-clair);
   transition: 0.2s;
 }
 
-.pub h3 {
+.promo h3 {
   color: var(--orange);
 }
 

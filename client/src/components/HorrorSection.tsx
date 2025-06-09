@@ -56,9 +56,9 @@ function HorrorSection() {
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
       }}
-      onMouseMove={handleMouseMove} // AJOUT : Gestion du mouvement de la souris
-      onMouseEnter={() => setIsHovering(true)} // AJOUT : Activation du survol
-      onMouseLeave={() => setIsHovering(false)} // AJOUT : Désactivation du survol
+      onMouseMove={handleMouseMove}
+      onMouseEnter={() => setIsHovering(true)}
+      onMouseLeave={() => setIsHovering(false)}
     >
       <div
         className="torch-overlay"
@@ -71,7 +71,7 @@ function HorrorSection() {
             : {}
         }
       />
-      <div className="pub-text">
+      <div className="promo-text">
         <h2>{game?.name}</h2>
         <h3>{game?.genres[0].name}</h3>
         <div className="platforms">
@@ -88,7 +88,7 @@ function HorrorSection() {
             ))}
         </div>
         <p>{game?.rating}/5</p>
-        <Link to={`/jeu/${game?.id}`} className="pub-button">
+        <Link to={`/jeu/${game?.id}`} className="promo-button">
           Découvrir
         </Link>
       </div>

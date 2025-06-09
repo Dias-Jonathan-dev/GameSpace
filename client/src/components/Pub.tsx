@@ -29,7 +29,6 @@ function Pub() {
           `https://api.rawg.io/api/games/${gameId}?key=95d7295d2a97423891de9826bea252cd`,
         );
         const data = await response.json();
-        console.log("Données jeu reçues:", data); // Debug
         setGame(data);
       } catch (error) {
         console.error("Erreur lors du chargement du jeu", error);
@@ -45,7 +44,7 @@ function Pub() {
 
   return (
     <section
-      className="pub"
+      className="promo"
       style={{
         backgroundImage: `url(${game.background_image})`,
         backgroundPosition: "center",
@@ -53,7 +52,7 @@ function Pub() {
         backgroundSize: "cover",
       }}
     >
-      <div className="pub-text">
+      <div className="promo-text">
         <h2>{game.name ?? "Nom indisponible"}</h2>
         <h3>{game.genres?.[0]?.name ?? "Genre indisponible"}</h3>
         <div className="platforms">
@@ -71,13 +70,12 @@ function Pub() {
         </div>
         <p>{game.rating ? `${game.rating}/5` : "Note indisponible"}</p>
         {game.id ? (
-          <Link to={`/jeu/${game.id}`} className="pub-button">
+          <Link to={`/jeu/${game.id}`} className="promo-button">
             Découvrir
           </Link>
         ) : (
           <p>Chargement du lien...</p>
         )}
-
       </div>
     </section>
   );
