@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router";
+import { Link } from "react-router-dom";
+
 import NintendoIcon from "../assets/images/platforms/NintendoIcon.svg";
 import PcIcon from "../assets/images/platforms/PcIcon.svg";
 import PsIcon from "../assets/images/platforms/PsIcon.svg";
@@ -69,9 +70,14 @@ function Pub() {
             ))}
         </div>
         <p>{game.rating ? `${game.rating}/5` : "Note indisponible"}</p>
-        <Link to={`/jeu/${game.id}`} className="pub-button">
-          Découvrir
-        </Link>
+        {game.id ? (
+          <Link to={`/jeu/${game.id}`} className="pub-button">
+            Découvrir
+          </Link>
+        ) : (
+          <p>Chargement du lien...</p>
+        )}
+
       </div>
     </section>
   );
