@@ -7,7 +7,7 @@ import XboxIcon from "../assets/images/platforms/XboxIcon.svg";
 import type { Game } from "../services/UseFetchGames";
 
 function Pub() {
-  const [game, setGame] = useState<Game>();
+  const [game, setGame] = useState<Game | null>(null);
   const gameId = 58175;
 
   const platformIcons: PlatformIconsType = {
@@ -28,43 +28,48 @@ function Pub() {
           `https://api.rawg.io/api/games/${gameId}?key=95d7295d2a97423891de9826bea252cd`,
         );
         const data = await response.json();
+        console.log("Données jeu reçues:", data); // Debug
         setGame(data);
       } catch (error) {
-        console.error("Erreur lors du chargement du jeu");
+        console.error("Erreur lors du chargement du jeu", error);
       }
     };
 
     fetchGame();
   }, []);
 
+  if (!game) {
+    return <p>Chargement du jeu...</p>;
+  }
+
   return (
     <section
       className="pub"
       style={{
-        backgroundImage: `url(${game?.background_image})`,
+        backgroundImage: `url(${game.background_image})`,
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
         backgroundSize: "cover",
       }}
     >
       <div className="pub-text">
-        <h2>{game?.name}</h2>
-        <h3>{game?.genres[0].name}</h3>
+        <h2>{game.name ?? "Nom indisponible"}</h2>
+        <h3>{game.genres?.[0]?.name ?? "Genre indisponible"}</h3>
         <div className="platforms">
-          {game?.parent_platforms
-            .filter((elem) => isPlatformKey(elem.platform.name))
+          {game.parent_platforms
+            ?.filter((elem) => isPlatformKey(elem.platform.name))
             .map((elem) => (
               <img
                 key={elem.platform.id}
                 src={
                   platformIcons[elem.platform.name as keyof PlatformIconsType]
                 }
-                alt=""
+                alt={elem.platform.name}
               />
             ))}
         </div>
-        <p>{game?.rating}/5</p>
-        <Link to={`/jeu/${game?.id}`} className="pub-button">
+        <p>{game.rating ? `${game.rating}/5` : "Note indisponible"}</p>
+        <Link to={`/jeu/${game.id}`} className="pub-button">
           Découvrir
         </Link>
       </div>
