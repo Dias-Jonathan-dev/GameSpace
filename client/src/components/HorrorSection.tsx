@@ -28,7 +28,7 @@ function HorrorSection() {
     const fetchGame = async () => {
       try {
         const response = await fetch(
-          `https:api.rawg.io/api/games/${gameId}?key=95d7295d2a97423891de9826bea252cd`,
+          `https://api.rawg.io/api/games/${gameId}?key=95d7295d2a97423891de9826bea252cd`,
         );
         const data = await response.json();
         setGame(data);
