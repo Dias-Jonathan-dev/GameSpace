@@ -26,6 +26,7 @@ p {
 
 body {
   background: linear-gradient(to right, #040718, #161e41, #040718);
+  overflow-x: hidden;
 }
 
 a {
