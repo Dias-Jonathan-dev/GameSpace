@@ -730,6 +730,27 @@ footer a {
   color: var(--orange);
 }
 
+.promo-text h3,
+.promo-text p {
+  color: #fff;
+}
+
+.promo-text .platforms {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+  width: 100%;
+  justify-content: flex-start;
+  overflow-x: unset;
+}
+
+.promo-text .platforms img {
+  max-width: 40px;
+  height: auto;
+  flex-shrink: 0;
+}
+
 /*---------------------- Details Genre---------------------------------*/
 
 .gamesDetails img {
