@@ -25,7 +25,7 @@ const GenreDetails = () => {
     const fetchGenre = async () => {
       try {
         const response = await fetch(
-          `https://api.rawg.io/api/genres/${id}?key=95d7295d2a97423891de9826bea252cd`,
+          `https://api.rawg.io/api/genres/${id}?key=e35c195d4edf48f29b546ccaa04bfb1d`,
         );
         if (!response.ok) throw new Error("Erreur lors du chargement");
         const data = await response.json();

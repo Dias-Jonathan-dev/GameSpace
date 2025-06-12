@@ -57,17 +57,26 @@ function GameDetail() {
         Date.now() - Number.parseInt(cacheTime) < sixHours
       ) {
         const parsed = JSON.parse(cached);
-        setDescription(parsed.description);
+        // Nettoyer la description ici
+        const cleanDescription = parsed.description
+          ? parsed.description.replace(/<[^>]+>/g, "")
+          : "";
+        setDescription(cleanDescription);
         return;
       }
 
       try {
         const response = await fetch(
-          `https://api.rawg.io/api/games/${id}?key=95d7295d2a97423891de9826bea252cd`,
+          `https://api.rawg.io/api/games/${id}?key=e35c195d4edf48f29b546ccaa04bfb1d`,
         );
         const data = await response.json();
 
-        setDescription(data.description);
+        // Nettoyer la description ici
+        const cleanDescription = data.description
+          ? data.description.replace(/<[^>]+>/g, "")
+          : "";
+
+        setDescription(cleanDescription);
         localStorage.setItem(cacheKey, JSON.stringify(data));
         localStorage.setItem(`${cacheKey}-timestamp`, Date.now().toString());
       } catch (error) {
